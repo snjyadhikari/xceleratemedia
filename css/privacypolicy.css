@@ -1,0 +1,62 @@
+.maincontent {
+    background-color: #F5F5F5;
+}
+
+.pptc {
+    padding: 100px 0px 0;
+}
+
+.pptc h1 {
+    font-size: 5rem;
+    color: #1813af;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+.pptc h2 {
+    font-size: 2rem;
+    color: #1813af;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.pptc h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.aboutus p, .aboutus li {
+    color: #58585a;
+    font-size: 16px;
+    padding: 10px 0;
+    text-align: justify;
+    line-height: 1.5;
+}
+/* 
+ul, ol {
+    padding-left: 20px !important;
+    margin-top: 15px !important;
+} */
+
+/* ul li, ol li {
+    margin-bottom: 1.5rem;
+} */
+
+p {
+    margin-bottom: 3rem !important;
+}
+
+.lowerAlpha {
+    list-style: lower-alpha;
+}
+
+.lowerRoman {
+    list-style: lower-roman;
+}
+
+
+@media(max-width: 767px) {
+    .pptc h1 {
+        font-size: 3rem;
+    }
+}

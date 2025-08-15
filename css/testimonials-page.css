@@ -1,0 +1,88 @@
+
+
+.csWrap {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+.csWrap .container {
+    max-width: 1300px;
+}
+.csHeadings h2 {
+    color: #ffffff;
+}
+.media-box-content {
+    width: 100% !important;
+}
+.mediaPara p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #191919;
+}
+.media-imgs ul li {
+    display: inline-block;
+    margin: 0 5px
+}
+
+.media-imgs ul li span{
+    display: block;
+    line-height: 1.5;
+}
+.media-imgs ul li span:first-child{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #3E3F41;
+}
+
+.media-imgs ul li span:last-child {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #070707;
+}
+
+.media-imgs ul {
+    display: flex;
+    align-items: center;
+}
+
+.media-box-content {
+    padding: 35px !important;
+
+        background-image: url(../images/quotes.svg) !important;
+    background-repeat: no-repeat !important;
+    background-size: 40% !important;
+    background-position: top left 35px !important;
+}
+
+.media-imgs ul li:last-child {
+    margin-left: 15px;
+    padding-left: 15px;
+    border-left: 1px solid #D3D3D3;
+}
+
+.panel-body .media-box-content p {
+    color: #000000;
+}
+
+@media(max-width: 991px) {
+    .media-imgs ul {
+        flex-wrap: wrap;
+
+    }
+
+    .media-imgs ul li:not(:last-child) {
+        width: 45%;
+    }
+    .media-imgs ul li:last-child {
+        width: 100%;
+        margin-top: 15px;
+        border-left: none;
+        border-top: 1px solid #D3D3D3;
+        padding-top: 5px;
+    }
+}
+
+@media(min-width: 992px) {}
+
+@media(min-width: 1200px) {}
+
+@media(min-width: 1900px) {}

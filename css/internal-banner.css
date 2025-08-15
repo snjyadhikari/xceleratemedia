@@ -1,0 +1,149 @@
+.section {
+    width: 100%;
+    /*padding-top: 100px;
+    padding-bottom: 100px;*/
+}
+
+.internalBanners {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.internalBanners .backgrounds {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.internalBanners .backgrounds .blueOerlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 73, 141, 0.5);
+}
+
+.internalBanners .backgrounds img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: top center;
+}
+
+.internalBanners .bp.bg.active img {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+}
+
+.internalBanners .bannerCaption {
+    position: relative;
+    /* background-image: url(../images/Path11565.png);
+    background-repeat: no-repeat;
+    background-position: right center; */
+    background-color: rgba(0, 73, 141, 0.9);
+    padding: 4rem;
+}
+
+.internalBanners .bannerCaption .bannerCaptionBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/Path11565.png);
+    background-repeat: no-repeat;
+    background-position: right -25% center;
+    opacity: 0.1;
+    background-size: 55%;
+}
+
+.pageHeadings {
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+
+@media(max-width: 991px) {
+    
+    .section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .internalBanners .container  {
+        position: absolute;
+        bottom: 150px;
+            width: 90%;
+    left: 0;
+    right: 0;
+    }
+
+    .internalBanners .bannerCaption {
+        width: 90%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .internalBanners .bannerCaption h2 {
+        font-size: 2.1rem;
+        font-weight: 300;
+        font-style: italic;
+        color: #ffffff;
+        line-height: 1.5;
+    }
+
+    .pageHeadings {
+        font-size: 3rem;
+    }
+}
+
+@media(min-width: 992px) {
+    .internalBanners .bannerCaption {
+        max-width: 50%;
+    }
+
+    .internalBanners .bannerCaption h2 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        font-style: italic;
+        color: #ffffff;
+        line-height: 1.5;
+    }
+}
+
+@media(min-width: 1200px) {
+    .internalBanners .bannerCaption {
+        max-width: 50%;
+    }
+
+    .internalBanners .bannerCaption h2 {
+        font-size: 4.5rem;
+        font-weight: 300;
+        font-style: italic;
+        color: #ffffff;
+        line-height: 1.5;
+    }
+}
+
+@media(min-width: 1900px) {
+    .internalBanners .bannerCaption {
+        max-width: 40%;
+    }
+
+    .internalBanners .bannerCaption h2 {
+        font-size: 3.9rem;
+        font-weight: 300;
+        font-style: italic;
+        color: #ffffff;
+        line-height: 1.5;
+    }
+}

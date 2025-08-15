@@ -1,0 +1,109 @@
+.media-box-content {
+    background-image: none !important;
+}
+
+.media-box-image {
+    width: 100% !important;
+    padding: 0;
+    border: 1.5px solid #E2E2E2 !important;
+}
+
+.broken-image-here {
+    background-color: #ffffff !important;
+}
+
+.media-box-content,
+.media-box-container {
+    background-color: transparent !important;
+}
+
+.media-box-container {
+    box-shadow: none !important;
+}
+
+.media-box-content {
+    padding: 15px 0 !important;
+}
+
+.media-box-date {
+    color: #8D8D8D !important;
+    font-size: 14px !important;
+    height: 15px;
+
+}
+
+.media-box-publisher {
+    color: #8D8D8D !important;
+    font-size: 14px !important;
+    height: 15px !important;
+    font-family: 'Graphik' !important;
+    font-weight: 500 !important;
+    line-height: 25px !important;
+}
+
+.media-box-title {
+    color: #000000 !important;
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+    padding: 0px 10px 0 0 !important;
+    height: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.csHeadings h2 {
+    color: #1813af;
+}
+
+.external {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-image: url(../images/external.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    position: absolute;
+    bottom: 15px;
+    right: 16px;
+}
+
+.new-temp {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.new-temp ul {
+    display: block;
+    font-size: 16px;
+}
+
+.new-temp ul li {
+    display: inline-block;
+    margin-right: 18px;
+}
+
+.new-temp ul li a {
+    color: #000000;
+}
+
+.new-temp ul li a.selected {
+    color: #1813af;
+}
+
+.new-temp ul li a::after {
+    display: inline-block;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+    position: relative;
+    top: -5px;
+}
+
+.new-temp ul li a.selected::after {
+    background-color: #1813af;
+}

@@ -1,0 +1,18 @@
+@import 'internal-banner.css';
+@import 'peoplesection.css';
+@import 'filter.css';
+
+
+
+.am-btn {
+    position: relative !important;
+    display: block !important;
+    right: initial;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 14px;
+    margin-bottom: 20px;
+    margin-top: -50px;
+}

@@ -1,0 +1,309 @@
+/*caseStudies*/
+.caseStudies{
+    background-color:#F8F8F8;
+    /* padding:10rem 0; */
+    padding-bottom: 100px;
+        min-height: 100vh;
+}
+.caseStudies h2.mainHeadingcs{
+    font-size:5rem;
+    font-weight:300;
+    color:#1813af;
+    margin-bottom:5rem
+}
+.caseStudies .caseStudiesWrapper{
+    position:relative
+}
+.caseStudiesSlider .owl-item{
+    padding:0 16rem;
+    opacity:0.4
+}
+.caseStudiesSlider .owl-item.active.center{
+    opacity:0
+}
+.caseStudiesSlider .owl-item .item{
+    border-radius:16px;
+    overflow:hidden
+}
+.cs-sliderContent{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background-color:#fff;
+    border-radius:8px;
+    z-index:2;
+    display:flex;
+    flex-wrap:wrap;
+    box-shadow:0px 20px 30px 0px rgba(0,0,0,0.1);
+    pointer-events:none
+}
+.sliderContent-slider{
+    width:55%
+}
+.sliderContent-slider{
+    height:100%;
+    border-radius:14px;
+    padding:20px;
+    /* background-image:url(../images/placeholder-landscape.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center; */
+    transition:all 0.5s
+}
+.sliderContent-slider .imgBox{
+    height:100%;
+    overflow:hidden;
+    position:relative;
+    border-radius:8px
+}
+.double-btn{
+    margin-top:80px
+}
+/* .caseStudies .btnGroup{
+    margin:30px auto 0;
+    position:absolute;
+    bottom:-80px;
+    left:50%;
+    transform:translateX(-50%);
+    pointer-events:all
+} */
+.sliderContent-right{
+    width:45%;
+    padding:0 50px
+}
+.sliderContent-right .scwrap{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.sliderContent-right p.tags{
+    display:table;
+    font-size:1.6rem;
+    font-weight:500;
+    color:#ffffff;
+    padding:8px;
+    border-radius:4px;
+    margin-bottom:5rem;
+    transition:all 0.5s
+}
+.sliderContent-right h3{
+    font-size:2rem;
+    font-style:italic;
+    font-weight:500;
+    margin-bottom:15px;
+    display:-webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    color: #1813af !important;
+}
+.sliderContent-right h2{
+    margin-bottom:15px;
+    font-size:3.4rem !important;
+    font-weight:500;
+    color:#070707;
+    /* display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden; */
+    line-height: 1.5;
+}
+.sliderContent-right p{
+    font-size:1.6rem;
+    color:#3E3F41;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden
+}
+.sliderContent-right ul{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    /* margin-top:25px */
+}
+.sliderContent-right ul li{
+    width:50%;
+    float:left;
+    position: relative;
+}
+.sliderContent-right ul li:last-child{
+    text-align:right;
+    width: auto;
+    /* margin-right:25px */
+}
+.scwrap a.viewAll{
+    pointer-events:all;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #6DB5A1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    /* position: relative; */
+    /* float: right; */
+    top: -12px;
+    margin: 0 auto;
+}
+
+.scwrap a.viewAll::after {
+    content: 'Read More' !important;
+    display: block;
+    background: none;
+    position: absolute;
+    right: initial;
+    top: 38px;
+    left: 50%;
+    color: #000000;
+    font-weight: 400;
+    width: 100px;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+.scwrap a.viewAll img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 15px;
+}
+
+@media (max-width: 991px){
+    .caseStudies{
+            padding: 5rem 0 10rem !important;
+    }
+    .mainHeadingcs{
+        font-size:3rem !important;
+        margin-bottom:3rem !important
+    }
+    .sliderContent-slider,.sliderContent-right{
+        width:100%
+    }
+    .cs-sliderContent{
+        position:relative;
+        top:0;
+        transform:translate(0, 0);
+        left:0;
+        /* margin-bottom:100px */
+    }
+    .sliderContent-right{
+        padding:50px 20px
+    }
+    .caseStudiesWrapper{
+        padding:0 15px;
+        height: auto !important;
+    }
+    .caseStudies .btnGroup{
+        width:290px;
+        margin-top: 35px;
+    }
+
+    .sliderContent-right h2 {
+        font-size: 2.4rem !important;
+        margin-bottom: 40px;
+    }
+
+    .sliderContent-right h3 {
+        overflow: visible;
+        margin-bottom: 15px;
+        -webkit-line-clamp: 2;
+        line-height: 1.3;
+    }
+
+    .scwrap a.viewAll {
+        right: 15px;
+    }
+
+    .sliderContent-right .scwrap {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .sliderContent-right ul {
+        position: relative;
+    }
+
+    .sliderContent-right ul li:last-child {
+        width: 80px;
+    }
+}
+@media (min-width: 1200px){
+    .cs-sliderContent{
+        width:75%;
+        /* height: 90%; */
+    }
+    .caseStudiesSlider .owl-item{
+        padding:0px 22rem
+    }
+    .caseStudies h2.mainHeadingcs{
+        position:relative;
+        margin-bottom: 5rem;
+    }
+
+    .caseStudies .caseStudiesWrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    .caseStudiesSlider, .caseStudiesSlider .owl-stage-outer, .caseStudiesSlider .owl-stage {
+        height: 100%;
+    }
+
+    .caseStudiesSlider .owl-stage {
+        display: flex;
+        align-items: center;
+    }
+    
+}
+@media (min-width: 1900px){
+    .cs-sliderContent{
+        width:70%;
+        /* height:475px */
+    }
+    .imgBox{
+        height:100%;
+        overflow:hidden;
+        position:relative
+    }
+    /* .imgBox img{
+        position:absolute;
+        top:-100%;
+        bottom:-100%;
+        left:0;
+        right:0;
+        margin:auto
+    } */
+    .caseStudiesSlider .owl-item{
+        padding:0px 25rem
+    }
+    .caseStudies .btnGroup{
+        bottom:-110px
+    }
+    .caseStudies h2.mainHeadingcs{
+        position:relative;
+        margin-bottom: 5rem;
+    }
+
+}
+
+@media (min-width: 2500px){
+    .caseStudies {
+        min-height: auto;
+    }
+    .cs-sliderContent {
+        width: 54%;
+    }
+}
+/*caseStudies*/

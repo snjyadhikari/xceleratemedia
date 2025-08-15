@@ -1,0 +1,354 @@
+@import 'internal-banner.css';
+@import 'stickyTabs.css';
+@import 'testimonials-home.css';
+
+.esgContent {
+    float: none !important;
+    margin: 50px auto;
+    display: table;
+
+}
+
+.headingSecond {
+    font-size: 5rem;
+    font-weight: 300;
+    color: #1813af;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.esgContent-left h3, .esgContent-right h3 {
+    /* font-size: 3rem; */
+    font-size: 2rem;
+    font-weight: 400;
+    color: #1813af;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.esgContent-left img {
+    -webkit-box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16);
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    margin-bottom: 75px;
+}
+
+.esgContent-left ul li {
+    font-size: 1.8rem;
+
+    color: #3E3F41;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* .esgContent-right ul li::before {
+    content: "";
+    color: #6DB5A1;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1.2em;
+    position: absolute;
+    height: 1rem;
+    background-color: #6DB5A1;
+    border-radius: 50%;
+    top: 8px;
+
+} */
+
+.downloadESG, .downloadESG:hover, .downloadESG:focus {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #191919;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.downloadESG::after {
+    display: inline-block;
+    content: '';
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/esg-download.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-left: 15px;
+}
+
+
+.esgSlider {
+    /* padding-top: 100px; */
+    background-color: #ffffff;
+}
+
+.testiContent-box h3 {
+    font-size: 3rem !important;
+    line-height: 1.5;
+    margin-bottom: 100px !important;
+}
+
+.testi-btns ul li {
+    border: none !important;
+}
+
+.tnfWrapper {
+    background-color: #F8F8F8;
+}
+
+.esgContent-left p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.tnf-content {
+    padding-bottom: 50px;
+}
+
+
+.esgContent-right img {
+    /* -webkit-box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16); */
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    
+}
+
+.tnfBottom {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.tnfBottom h4 {
+    font-size: 2.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #191919;
+    margin-bottom: 25px;
+}
+
+.tnfBottom h5 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3E3F41;
+    margin-bottom: 25px;
+}
+
+.tnfBottom h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.keyInitiative ul li {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1.5px solid #DBDBDB;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+
+    margin-bottom: 20px;
+}
+
+.keyInitiative-txt, .keyInitiative-img {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.keyInitiative-txt {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.keyInitiative-img {
+    min-height: 200px !important;
+    border-right: 1.5px solid #DBDBDB;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.keyInitiative-img img {
+    display: block;
+}
+
+.keyInitiative-img hr {
+    display: block;
+    width: 100%;
+}
+
+.keyInitiative-txt p {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #3E3F41;
+}
+
+.keyInitiative-txt p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.keyInitiative-txt p span {
+    color: #1813af;
+    font-weight: 500;
+}
+
+.keyInitiative-txt h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000000;
+}
+
+.tnf-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tnf-imgright {
+    background-image: url(../images/truenorth-foundation.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+
+    -webkit-box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 30px 50px 0px rgba(0,0,0,0.16);
+}
+
+.testimonialsHome .btnGroup {
+    position: absolute;
+    bottom: 20px;
+    z-index: 2;
+    right: 50px;
+}
+
+.testimonialsHome .btnGroup ul {
+    background-color: #ffffff;
+    border: none;
+}
+
+.testimonialsHome  {
+    margin-bottom: 100px;
+}
+
+.tnf-content {
+    margin: 100px auto;
+}
+
+.img-earth {
+    position: relative;
+}
+
+.img-earth .video-play-button {
+        left: 10%;
+    top: initial;
+    bottom: 10px;
+}
+
+.img-earth .video-play-button span {
+    color: #ffffff;
+}
+
+.img-ov {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../images/Agassi_Bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+}
+
+@media(max-width: 991px) {
+    .headingSecond {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    .esgContent-left h3 {
+        font-size: 2rem;
+    }
+
+    .esgContent {
+        margin: 30px auto 0;
+    }
+
+    .esgContent-left {
+        margin-bottom: 50px;
+    }
+    .esgContent-right ul {
+        padding-left: 15px;
+    }
+    .esgContent-right ul li {
+        font-size: 1.4rem;
+    }
+
+    .counterWrapper  {
+        margin: 25px auto 0;
+    }
+
+    .testiContent-box h3 {
+        font-size: 2.6rem !important;
+    }
+
+    .esgContent-left p {
+        font-size: 1.4rem;
+    }
+
+    .keyInitiative-img {
+        border-right: none;
+        border-bottom: 1.5px solid #DBDBDB;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+
+    .keyInitiative-txt p {
+        font-size: 1.6rem;
+    }
+
+    .tnfBottom h4 {
+        font-size: 1.8rem;
+        text-align: left !important;
+    }
+
+    .tnfBottom h5 {
+        font-size: 1.4rem;
+        text-align: left !important;
+    }
+
+    .tnfBottom h3 {
+        font-size: 1.8rem;
+    }
+
+    .tnf-imgright {
+        height: 400px;
+    }
+
+    .esgContent-left ul li, .downloadESG {
+        font-size: 1.6rem;
+    }
+}
+
+@media(min-width: 992px) {}
+
+@media(min-width: 1024px) {}
+
+@media(min-width: 1200px) {
+}
+
+@media(min-width: 1900px) {}

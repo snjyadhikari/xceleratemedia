@@ -1,0 +1,34 @@
+.peopleSection {
+    position: relative;
+    background-color: #1813af;
+    /* background-image: url(../images/plac.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    border-bottom: 4px solid #fff;
+    z-index: 9;
+}
+
+.peopleSection h2 {
+    font-size: 5rem;
+    font-weight: 300;
+    color: #1813af;
+    text-align: center;
+}
+
+.peoples-right {
+    padding: 0 !important;
+}
+
+
+@media(max-width: 991px) {}
+
+@media(min-width: 992px) {}
+
+@media(min-width: 1200px) {
+    .peopleSection .container {
+        width: 85%;
+    }
+}
+
+@media(min-width: 1900px) {}

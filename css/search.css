@@ -1,0 +1,220 @@
+.searchWrapper {
+    min-height: 100vh;
+    background-color: #1813af;
+    background-image: url(../images/search-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 00px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.searchBox {
+    padding: 60px 60px;
+    background-color: #ffffff;
+    border-radius: 32px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(255,255,255,0.5);
+}
+
+.searchField {
+    position: relative;
+    font-weight: 400;
+}
+
+.searchField input {
+    height: 50px;
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 400;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: 0;
+
+    background-image: url(../images/searchpagelogo.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 30px;
+    padding-left: 50px;
+}
+
+.searchField input:focus, .searchField input:active {
+    outline: 0;
+}
+
+.searchField label {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #ffffff;
+
+    pointer-events: none;
+}
+
+.searchField label img {
+    max-width: 30px;
+    margin-right: 15px;
+}
+
+.searchField input:focus label, .searchField input:active label {
+    opacity: 0;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color: #ffffff;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffffff;
+}
+
+::placeholder {
+  color: #ffffff;
+}
+
+.popSearchWrapper {
+    margin-top: 50px;
+}
+
+.PopSearch .head {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.PopSearch ul li {
+    margin-bottom: 15px;
+}
+
+.PopSearch ul li a {
+    display: table;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #191919;
+    font-weight: 400;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.PopSearch ul li a:hover, .PopSearch ul li a:focus {
+    background-color: #3897D5;
+    color: #ffffff;
+}
+
+.PopSearch.ql ul li a::before {
+    display: inline-block;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/quicklink-ico.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+        position: relative;
+    top: 2px;
+    margin-right: 8px;
+}
+
+.searchField .search-btn {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../images/search-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.searchField .search-btn:hover, .searchField .search-btn:focus {
+    right: 0;
+    outline: 0;
+}
+
+
+@media(max-width: 991px) {
+    .searchBox {
+        padding: 20px 20px;
+            border-radius: 14px;
+    }
+
+    .searchField input {
+        font-size: 2rem;
+        background-size: 18px;
+        padding-left: 30px;
+    }
+
+    .searchField .search-btn {
+        width: 47px;
+        height: 30px;
+        background-size: 60%;
+    }
+
+    .PopSearch ul li {
+        display: inline-block;
+    }
+
+    .PopSearch ul li a {
+        font-size: 10px;
+    }
+
+    .PopSearch ul li a {
+        padding: 10px 18px;
+    }
+
+    .PopSearch .head {
+        font-size: 12px;
+        margin-bottom: 18px;
+    }
+
+    .PopSearch:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    
+    .searchWrapper {
+        padding: 0;
+    }
+
+    .searchBox {
+        height: 100vh;
+        border-radius: 0;
+            padding-top: 80px;
+    }
+}
+
+@media(min-width: 992px) {
+    .searchBox {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+    }
+}

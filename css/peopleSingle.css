@@ -1,0 +1,136 @@
+.peopleSingleWrapper {
+    height: 100vh;
+    /* display: flex;
+    flex-wrap: wrap;
+    align-items: center; */
+    overflow: hidden;
+}
+
+.peopleSingle-left {
+    background: #b7b7b7;
+    /* background: linear-gradient(90deg, rgba(107,107,107,1) 0%, rgba(107,107,107,1) 35%, rgba(165,165,165,1) 100%); */
+    
+    padding-top: 75px;
+}
+
+.peopleSingle-right {
+    padding: 0 10rem !important;
+    color: #FFFFFF;
+}
+
+.peopleSingle-right h1 {
+    font-size: 6rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 10px; 
+}
+
+.peopleSingle-right h3 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+.peopleSingle-right h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.peopleSingle-right h2 {
+    font-size: 3rem;
+    line-height: 1.5;
+    font-weight: 300;
+    font-style: italic;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.peopleSingle-right p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.peopleSingle-right hr {
+    border: 0.5px dashed rgba(255,255,255,0.5);
+}
+
+.people-scroll-content {
+    height: 400px;
+}
+
+.dotted-border {
+    width: 100%;
+    height: 2px;
+    border-bottom: 1px dashed #ffffff;
+    margin: 40px auto;
+}
+
+
+@media(max-width: 991px){
+    
+    .peopleSingleWrapper {
+        height: auto;
+        padding-top: 55px;
+    }
+    .peopleSingle-right {
+        padding: 30px !important;
+    }
+
+    .people-scroll-content {
+        height: auto;
+    }
+
+    .peopleSingle-right h1 {
+        font-size: 3rem;
+    }
+
+    .peopleSingle-right h3 {
+        font-size: 2.4rem;
+    }
+
+    .peopleSingle-right p {
+        font-size: 1.4rem;
+    }
+}
+
+@media(min-width: 992px){}
+
+@media(min-width: 1200px){
+    .people-scroll-content {
+        height: 400px;
+    }
+
+    .peopleSingle-right {
+        padding-top: 100px !important;
+    }
+
+    .people-scroll-content-para {
+        height: 45%;
+        overflow: hidden;
+    }
+}
+
+@media(min-width: 1300px){
+    .people-scroll-content-para {
+            height: 55%;
+        overflow: hidden;
+    }
+}
+
+@media(min-width: 1400px){
+    .people-scroll-content-para {
+        height: 95%;
+    }
+}
+
+
+
+@media(min-width: 1900px){
+    .people-scroll-content {
+        height: 550px;
+    }
+}

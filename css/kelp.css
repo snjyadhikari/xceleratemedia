@@ -1,0 +1,256 @@
+.about-kelp {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #F8F8F8;
+}
+
+.about-kelp-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    float: none !important;
+    margin: 0 auto;
+}
+
+.about-kelp-inner h3 {
+    /* font-weight: 400; */
+    color: #1813af;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.about-kelp-inner h3.last-head {
+    font-weight: 600;
+    color: #000000;
+    margin-top: 30px;
+}
+
+.kelp-inner-left ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
+    list-style-image: url(../images/kelp/green-dot.png);
+    padding-left: 15px;
+}
+
+.kelp-inner-left ul li {
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+
+.kelp-inner-left ul li h5 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.kelp-inner-left ul li p {
+    width: 80%;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3E3F41;
+    margin-top: 15px;
+}
+
+.kelp-inner-right img {
+    max-width: 75%;
+}
+
+.modules .kelp-inner-right img {
+    max-width: 100%;
+}
+
+.odp {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #1813af;
+}
+
+.odp h2 {
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.platform {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+    background-image: url(../images/kelp/placeholder-landscape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.platform h3 {
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.p-slider-slide h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #3E3F41;
+    margin: 10px 0;
+}
+
+.p-slider-slide p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #3E3F41;
+}
+
+.p-slider .row {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.platformSlider {
+    float: none !important;
+    margin: 0 auto;
+}
+.clients h2 {
+    margin-bottom: 50px;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 400;
+}
+.clients .partner-txt{
+    color:#3E3F41;
+    font-size: 27px;
+}
+
+.clients-internl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients-internl img {
+
+    max-width: 170px;
+}
+.clients-internl .for-fsn-width img{
+    max-width: 120px;
+}
+
+.contact {
+
+    background-color: #EDF8FF;
+    padding: 30px 0px;
+    margin-top: 50px;
+    border-radius: 40px;
+}
+
+.contact p {
+    font-size: 25px;
+    color: #1813af;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.contact p a {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+@media(max-width:991px) {
+    .about-kelp-inner, .kelp-inner-left {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .about-kelp-inner h3 {
+        font-size: 16px !important;
+    }
+
+    .kelp-inner-right {
+        margin-bottom: 30px;
+    }
+
+    .kelp-inner-right img {
+        max-width: 100%;
+    }
+
+    .kelp-inner-left ul {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+    }
+
+    .kelp-inner-right-mobile {
+        padding: 0 !important;
+    }
+
+    .platform h3 {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    .p-slider-slide img {
+        width: 100px !important;
+    }
+
+    .p-slider-slide h3 {
+        text-align: center;
+    }
+
+    .m-platformSlider {
+        margin-top: 50px;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span {
+        width: 30px;
+    }
+
+    .kelp-inner-left ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .clients-internl {
+        gap: 50px;
+    }
+
+    .contact p {
+        font-size: 18px;
+
+    }
+
+    .contact p a {
+        font-size: 14px;
+    }
+    .kelp-inner-left ul li h5 {
+        font-size: 18px;
+}
+.kelp-inner-left ul li {
+    padding-left: 10px;
+}
+}
+
+@media(min-width: 768px) {
+    .kelp-inner-left ul {
+        grid-template-columns: 1fr 1fr;
+        padding-left: 20px;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .kelp-inner-left ul li h5 {
+        font-size: 15px;
+    }
+    .kelp-inner-left ul li {
+    padding-left: 5px;
+    }
+    .kelp-inner-left ul {padding-left: 19px;}
+}
+
+    
+    
+

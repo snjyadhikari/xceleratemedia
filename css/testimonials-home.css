@@ -1,0 +1,201 @@
+.testimonialsHome {
+  background-color: #ffffff;
+  padding-bottom: 60px;
+}
+
+.testimonialsHome h2.sectionHeading {
+  color: #1813af;
+  font-weight: 300;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.testimonialsHome .mainContent {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.testimonialsHome-left h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #1813af;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+}
+
+.testimonialsHome-left p {
+  font-size: 1.6rem;
+  color: #222222;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.person-name,
+.person-profile {
+  font-weight: 500 !important;
+}
+
+.testimonialsHome-left ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+.testimonialsHome-left ul li {
+  display: inline-block;
+}
+
+.testimonialsHome-left ul li.company-logo img {
+  width: 135px;
+}
+
+.testimonialsHome-left ul li p {
+  margin-bottom: 0px;
+}
+
+.testimonialsHomeSlider .item {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.testimonialsHomeSlider .owl-item img {
+  max-width: 100% !important;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+
+.testimonialsHomeSlider .video-play-button {
+  top: initial;
+  bottom: 0;
+  left: 50px;
+}
+
+.testimonialsHomeSlider .video-play-button span {
+  color: #ffffff;
+}
+
+/* .testimonialsWrapper {
+    display: block !important;
+} */
+
+.testimonialsHome-left {
+  background-image: url(../images/quotes.svg);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 60%;
+}
+
+.testimonialsHome-left ul li:nth-child(2) {
+  width: 1px !important;
+  background-color: #c1c1c1;
+}
+
+.testimonialsHome .btnGroup {
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  right: 50px;
+}
+
+.testimonialsHome .btnGroup ul {
+  background-color: #ffffff;
+  border: none;
+}
+
+.testimonialsHome .btnGroup ul li:first-child {
+  padding: 1.1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.testimonialsHome .btnGroup ul li .ag-counter .num {
+  color: #3897d5;
+  font-weight: 500;
+}
+
+.testimonialsWrapper .knowMore-btn {
+  margin: 25px auto;
+  border: 2px solid #000000;
+  color: #000000;
+}
+
+@media (max-width: 991px) {
+  .testimonialsHome-left {
+    margin-top: 30px;
+  }
+  .testimonialsHome-left {
+    padding: 0 25px !important;
+  }
+
+  .testimonialsHome-left h2 {
+    font-size: 2.6rem;
+  }
+
+  .testimonialsHome-left p {
+    font-size: 1.4rem;
+  }
+
+  .testimonialsHomeSlider .video-play-button {
+    zoom: 0.8;
+  }
+
+  .testimonialsHome {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .testimonialsHome-left {
+    background-position: top left 25px;
+  }
+
+  .testimonialsHome-left ul li {
+    width: 100%;
+  }
+
+  .testimonialsHome-left ul li:nth-child(2) {
+    width: 100% !important;
+    height: 1px !important;
+    margin: 10px 0;
+  }
+
+  .testimonialsHome .btnGroup {
+    bottom: 15px;
+    right: 30px;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  .testimonialsHome h2.sectionHeading {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .testimonialsHome-left ul {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .person-profile {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (min-width: 1900px) {
+  .person-profile {
+    font-size: 1.4rem !important;
+  }
+}

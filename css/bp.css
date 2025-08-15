@@ -1,0 +1,201 @@
+/*Business Philosophy*/
+.bp.bg{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%
+}
+.bp.bg img{
+    -o-object-fit:cover;
+    object-fit:cover;
+    width:100%;
+    height:100%;
+    opacity:0.1;
+    transform:scale(1.2) translateZ(0);
+    transition:transform 4s cubic-bezier(0.23, 1, 0.32, 1) 0s,opacity 4s 0s
+}
+
+.businesses-philoosphy {
+    padding-top: 0 !important;
+    overflow: hidden;
+}
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(rgba(0,73,141,0.6), rgba(0,73,141,0.6)), linear-gradient(135deg, #1c10a6 0%, #1a2deb 50%, #007ef6 100%); /* gradient */
+    background-blend-mode: multiply; 
+    z-index:1;
+    transform:scale(1.2) translateZ(0);
+
+    /**/
+    opacity: 0;
+}
+.fp-section.active .mainContent.active .bp.bg img{
+    opacity:1;
+    transform:scale(1) translateZ(0);
+    transition:transform 4s cubic-bezier(0.23, 1, 0.32, 1) 0s,opacity 4s 0s
+}
+.businesses-philoosphy .mainContent{
+    display:flex;
+    align-items:center
+}
+.businesses-philoosphy .container{
+    z-index:2
+}
+.bpWrapper{
+    width:50%;
+    max-width:665px;
+    float:right
+}
+.bpWrapper span.hashNav-Arrow1{
+    top:60px;
+    display:block;
+    position:absolute;
+    width:25px;
+    height:24px;
+    background-image:url(../images/acc-green-arrow.svg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    transition:all 0.5s;
+    left:-25px;
+    background-size:100%
+}
+.bpWrapper h2{
+    font-weight:300;
+    font-size:5rem;
+    color:#fff;
+    margin-bottom: 2.5rem;
+    transform: none !important;
+    opacity: 1 !important;
+}
+.bpWrapper .bp-box{
+    background-color:#fff;
+    padding:5rem;
+    border-radius:1.6rem;
+    position:relative
+}
+.bpWrapper .bp-box .panel-default{
+    position:relative
+}
+.bpWrapper .bp-box .panel-default.active::after{
+    display:block;
+    content:'';
+    width:25px;
+    height:24px;
+    background-image:url(../images/acc-green-arrow.svg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    position:absolute;
+    top:7px;
+    left:-25px;
+    transition:all 0.5s
+}
+.bpWrapper .bp-box .showcase-controls{
+    float:right;
+    position:relative;
+    right:20px;
+    bottom:20px
+}
+.bpWrapper .bp-box .panel-group{
+    margin-bottom:0
+}
+.bpWrapper .bp-box .panel{
+    box-shadow:none
+}
+.bpWrapper .bp-box .panel-default{
+    border-color:#ffffff
+}
+.bpWrapper .bp-box .panel-default>.panel-heading{
+    background-color:#ffffff;
+    border-color:#ffffff
+}
+.bpWrapper .bp-box .panel-default>.panel-heading .panel-title{
+    font-size:2rem;
+    letter-spacing: 3px;
+    
+}
+.bpWrapper .bp-box .panel-default.active>.panel-heading .panel-title a{
+    color:#1813af;
+    text-transform:none;
+    text-transform:uppercase
+}
+.bpWrapper .bp-box .panel-default>.panel-heading+.panel-collapse>.panel-body{
+    border-top-color:#ffffff;
+    font-size:1.8rem
+}
+.bpWrapper .bp-box .panel-default>.panel-heading+.panel-collapse>.panel-body p:not(:last-child){
+    margin-bottom:3rem;
+
+}
+.bpWrapper .bp-box .panel-default>.panel-heading+.panel-collapse>.panel-body p span{
+    font-weight:500;
+    font-style:italic
+}
+
+.opacityBG {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20%;
+    opacity: 0.5;
+}
+@media (max-width: 1199px){
+    .businesses-philoosphy{
+        overflow:hidden
+    }
+    .businesses-philoosphy .container{
+        padding-left:0;
+        padding-right:0
+    }
+    .bpWrapper{
+        width:90%;
+        margin:0 auto;
+        float:none
+    }
+    .bpWrapper .bp-box{
+        padding:2.5rem
+    }
+    .bpWrapper .bp-box .panel-default>.panel-heading+.panel-collapse>.panel-body{
+        border-top-color:#ffffff;
+        font-size:1.4rem
+    }
+    .bpWrapper .bp-box .panel-default>.panel-heading .panel-title{
+        font-size:1.6rem
+    }
+    .bpWrapper h2{
+        text-align:center;
+        font-size:3rem
+    }
+    .bpWrapper .bp-box .panel-default.active::after{
+        display:block;
+        content:'';
+        width:25px;
+        height:16px;
+        background-image:url(../images/acc-green-arrow.svg);
+        background-repeat:no-repeat;
+        background-position:center center;
+        position:absolute;
+        top:10px;
+        left:-20px;
+        transition:all 0.5s
+    }
+}
+
+@media(min-width: 1200px) {
+    .bpWrapper {
+        width: 500px;
+        float: right;
+    }
+}
+@media(min-width: 1900px) {
+    .bpWrapper {
+        width: 665px;
+        float: right;
+    }
+}
+/*Business Philosophy*/

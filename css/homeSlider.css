@@ -1,0 +1,373 @@
+/*home slider*/
+.view1{
+    padding-top:0 !important
+}
+.full-sec{
+    display:flex;
+    align-items:center;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%
+}
+.carouselWrapper{
+    display:flex;
+    align-items:center;
+    width:100%;
+    height:100vh
+}
+@-webkit-keyframes bg-scrolling-reverse{
+    100%{
+        background-position:100% 100%
+    }
+}
+@keyframes bg-scrolling-reverse{
+    100%{
+        background-position:100% 100%
+    }
+}
+@-webkit-keyframes bg-scrolling{
+    0%{
+        background-position:100% 100%
+    }
+}
+@keyframes bg-scrolling{
+    0%{
+        background-position:100% 100%
+    }
+}
+.carouselbg {
+    pointer-events: none;
+    background-image: url("../images/new_hero_bg.png");
+    -webkit-animation: bg-scrolling-reverse 25s infinite;
+    animation: bg-scrolling-reverse 25s infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    position:relative
+}
+.container .homeSliderOwl h2{
+    font-weight:300;
+    color:#fff;
+    margin-bottom:2rem
+}
+.container .homeSliderOwl h2 span{
+    color:#3897D5
+}
+.ag-controls{
+    position:absolute;
+    text-align:center;
+    top:50%;
+    right: 10%;
+    transform:translateY(-50%);
+    width:65px
+}
+.ag-controls .homeSliderOwl-showcase-controls{
+    height:40px;
+    margin:0 auto 10px;
+    width:40px
+}
+.ag-controls .homeSliderOwl-showcase-controls::before{
+    background-color:rgba(255,255,255,0.15)
+}
+.ag-controls .homeSliderOwl-showcase-controls .arrow-next{
+    border-color:#fff
+}
+.ag-controls .counterWrapper{
+    color:#fff;
+    font-size:1.8rem
+}
+
+.scrollDown {
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    left: 50%;
+    bottom: 10px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.scrollDown::after {
+    content: '';
+    display: block;
+    width: 13px;
+    height: 20px;
+    background-image: url(../images/arrowDown.svg);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    background-size: contain;
+    transition: all 0.5s;
+}
+.scrollDown:hover, .scrollDown:focus {
+    color: #ffffff;
+}
+.scrollDown:hover::after {
+    bottom: -5px;
+}
+
+@media (max-width: 767px){
+    .carouselWrapper .container .homeSliderOwl h2{
+        font-size:4rem
+    }
+    .carouselWrapper .container{
+        padding:0px 4rem
+    }
+    .carouselWrapper .ag-controls{
+        float: left;
+        width: 127px !important;
+        align-items: center;
+        display: flex;
+        flex-direction: row-reverse;
+        top: 100% !important;
+        margin-top: 20px;
+        left: 40px;
+    }
+    .carouselWrapper .ag-controls .showcase-controls{
+        margin-bottom:0 !important
+    }
+}
+@media (min-width: 768px){
+    .carouselWrapper .container .homeSliderOwl h2{
+        font-size:6rem
+    }
+    .carouselWrapper .container{
+        padding:0 5rem
+    }
+}
+@media (min-width: 1200px){
+    .fp-section .mainContent{
+        width:100%;
+        height:100%;
+        transform:scale(1,1);
+        transition:transform 1s cubic-bezier(0.435, 0.01, 0.135, 1);
+        opacity:1;
+    }
+    .fp-section.active .mainContent.active{
+        transform:scale(1, 1);
+        opacity:1
+    }
+    .carouselWrapper .container .homeSliderOwl h2{
+        font-size:5rem
+    }
+    .carouselWrapper .container{
+        padding:0 20rem
+    }
+}
+@media (min-width: 1900px){
+    .carouselWrapper .container .homeSliderOwl h2{
+        font-size:10rem
+    }
+    .carouselWrapper .container{
+        padding:0 25rem
+    }
+
+    .carouselWrapper .container .homeSliderOwl h2{
+        font-size:7rem
+    }
+}
+.showcase-controls{
+    cursor:pointer
+}
+.showcase-controls:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:40px;
+    height:40px;
+    border:2px solid #c7c7c7;
+    border-radius:50%;
+    transition:all 150ms ease-out
+}
+.showcase-controls .circle-wrapper,.showcase-controls:before{
+    transition:all 500ms ease-out
+}
+.showcase-controls .arrow-next{
+    position:absolute;
+    top:5px;
+    left:4px;
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-width:2px 2px 0 0;
+    border-style:solid;
+    margin:10px;
+    z-index:2;
+    transform:rotate(45deg)
+}
+.showcase-controls:hover .circle-wrapper{
+    transition:all 75ms ease-out;
+    transform:scale(1.08)
+}
+.showcase-controls:hover:before{
+    transition:all 75ms ease-out;
+    transform:scale(1.08)
+}
+.showcase-controls:focus{
+    background:#000
+}
+.showcase-triggers{
+    overflow:auto
+}
+.showcase-triggers .dot{
+    float:left;
+    background:#d8d8d8;
+    width:12px;
+    height:12px;
+    margin:5px 12px 0 0;
+    border-radius:50%
+}
+.showcase-triggers .dot:hover{
+    background:#c2c2c2;
+    cursor:pointer
+}
+.showcase-next{
+    float:right;
+    cursor:pointer
+}
+#slider-horizontal-controller{
+    position:absolute;
+    bottom:100px;
+    right:5%;
+    left:48%;
+    z-index:5
+}
+#slider-horizontal-controller.animating #slider-horizontal-controller-progress>div{
+    transition:all 7000ms linear
+}
+#slider-horizontal-controller nav{
+    display:block
+}
+#slider-horizontal-controller ul{
+    margin:0;
+    padding:0;
+    display:flex
+}
+#slider-horizontal-controller li{
+    display:inline-block;
+    width:20%
+}
+#slider-horizontal-controller li:hover a,#slider-horizontal-controller li.active a{
+    color:#222
+}
+#slider-horizontal-controller a{
+    display:block;
+    color:#757575;
+    font-size:11px;
+    text-transform:uppercase
+}
+#slider-horizontal-controller-progress{
+    position:relative;
+    height:1px;
+    background:#d3d3d3;
+    margin:0 0 20px 0;
+    overflow:hidden
+}
+#slider-horizontal-controller-progress>div{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    background:#111;
+    width:1px
+}
+.circle-wrapper{
+    width:44px;
+    height:44px;
+    position:absolute;
+    clip:rect(0, 44px, 44px, 20px);
+    z-index:1
+}
+.circle-wrapper.run{
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-timing-function:linear;
+    -moz-animation-iteration-count:1;
+    -moz-animation-fill-mode:forwards;
+    -moz-timing-function:linear;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    timing-function:linear;
+    -webkit-animation-duration:0.01s;
+    -webkit-animation-delay:3.5s;
+    -webkit-animation-name:close-wrapper;
+    -moz-animation-duration:0.01s;
+    -moz-animation-delay:3.5s;
+    -moz-animation-name:close-wrapper;
+    animation-duration:0.01s;
+    animation-delay:3.5s;
+    animation-name:close-wrapper
+}
+.circle-wrapper.run .circle:first-child{
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-duration:7s;
+    -webkit-animation-name:left-spin;
+    -moz-animation-iteration-count:1;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-timing-function:linear;
+    -moz-animation-duration:7s;
+    -moz-animation-name:left-spin;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+    animation-duration:7s;
+    animation-name:left-spin
+}
+.circle-wrapper.run .circle:last-child{
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-fill-mode:forwards;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-duration:3.5s;
+    -webkit-animation-name:right-spin;
+    -moz-animation-iteration-count:1;
+    -moz-animation-fill-mode:forwards;
+    -moz-animation-timing-function:linear;
+    -moz-animation-duration:3.5s;
+    -moz-animation-name:right-spin;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    animation-timing-function:linear;
+    animation-duration:3.5s;
+    animation-name:right-spin
+}
+.circle{
+    width:40px;
+    height:40px;
+    border:2px solid #3498db;
+    position:absolute;
+    clip:rect(0, 22px, 44px, 0);
+    border-radius:50%
+}
+@-webkit-keyframes right-spin{
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform:rotate(180deg)
+    }
+}
+@-webkit-keyframes left-spin{
+    from{
+        transform:rotate(0deg)
+    }
+    to{
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes close-wrapper{
+    to{
+        clip:rect(auto, auto, auto, auto)
+    }
+}
+/*home slider*/

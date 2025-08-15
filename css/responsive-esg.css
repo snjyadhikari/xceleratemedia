@@ -1,0 +1,226 @@
+@media screen and (min-width:1400px) {
+    
+}
+@media screen and (min-width:1600px) {
+    .history-slider .slick-prev {
+    top: 16%;
+}
+.history-slider .slick-next {
+    top: 16%;
+}
+}
+
+@media screen and (min-width:1900px) {
+      
+.history-slider .slick-prev {
+    top: 108px;
+}
+.history-slider .slick-next {
+    top: 108px;
+}
+}
+@media screen and (max-width:1300px) {
+  
+}
+@media screen and (max-width:1280px) {
+    
+}
+@media screen and (max-width:1200px) {
+    
+}
+@media screen and (max-width:1100px) {
+    
+}
+@media screen and (max-width:1024px) {
+
+   /*slider section  */
+    .bannerttl {font-size: 30px}
+    .history-heading{font-size: 20px}
+
+     /*slider section closed */
+
+
+     /*section 2  */
+     .secdflex{flex-wrap: wrap; justify-content: flex-start;}
+     .sec2 .bannerttl {font-size: 30px}
+     .subheading { font-size: 22px; margin-bottom: 20px;}
+     .sec3content{width: 100%}
+     .arrowblk{display: none;}
+     .sec3width{width: 30%; margin-right: 3%; margin-bottom: 30px}
+
+
+      /*slider section 3  */
+      .sec4 .bannerttl {font-size: 30px}
+      .sec3content {  width: 100%;}
+      .sec4.secdflex { flex-wrap: wrap; justify-content:space-between;}
+      .sec4width{width: 45%; margin: 30px 0}  
+      .sec4blk:before{display: none;}
+      .halfcricle:after { 
+        top: -18px;
+        left: -18px;
+        width: 160px;
+        height: 160px;
+        border: 3px solid #5da8dc;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        border-bottom: 3px solid #5da8dc;
+        border-radius: 50%;}
+       .downcl.halfcricle:after { top: -18px;  transform: inherit;}
+       .halfcricle{width: 140px; height: 140px; font-size: 18px}
+
+
+
+       /*section4   */
+     .secdflex{flex-wrap: wrap; justify-content: flex-start;}
+     .sec5 .bannerttl {font-size: 30px}
+     .subheading { font-size: 22px; margin-bottom: 20px;}
+     .sec3content{width: 100%}
+     .arrowblk{display: none;}
+     .sec3width{width: 30%; margin-right: 3%; margin-bottom: 30px}
+
+      /*section5   */
+      .sec6 .bannerttl{font-size: 30px}
+      .sec6left{width: 100%}
+      .approachflex{flex-wrap: wrap;}
+      .approach-width { width: 24%;  padding: 30px 0;  position: relative;}
+      .approach-width:before {top: 55px}
+      .tabblk a{padding: 7px 15px}
+
+
+}
+   
+
+
+@media screen and (max-width:1000px) {
+
+.tabbtn {top: 110px}
+.tabblk li:first-child{display: none;}
+
+
+  }
+
+
+  @media screen and (max-width:900px) {
+  .tabblk a{font-size: 16px; padding: 10px 0}
+  .external { display: block;  width: 35px;  height: 34px;}
+  .media-box-title, .esg-23 li a{font-size: 16px !important}   
+}
+@media screen and (max-width:768px) {
+
+  .tabbtn .container{padding: 0}
+.common-padding .text-center {  text-align: center !important;}
+.esg-23 li a{padding: 10px}
+.backgrounds img{width:100%;}
+.tabblk{flex-wrap: wrap;}
+.tabblk li { width: 50%; border: 1px solid #ffffff2b; display: flex;  align-items: center; text-align: center; justify-content: center;}
+.tabblk a{width: 100%}
+.bannerttl {font-size: 30px; margin-bottom: 30px; }
+.history-heading{font-size: 20px}
+.history-fo{font-size: 14px}
+.history-slider .slick-prev, .history-slider .slick-next { top: 108px;}
+.common-padding{padding: 40px 15px}
+
+/*section 2 open      */   
+.sec2padding { padding:40px 0;}   
+.secdflex{flex-wrap: wrap; justify-content:space-between;}
+.sec3width{width: 45%; margin-right: 1%; margin-bottom: 30px} 
+p{font-size: 14px} 
+.sec3hed {font-size: 16px}
+.bulletblk li{font-size: 14px}
+.circleblk { width: 80px;  height: 80px;  border: 2px solid #fff; font-size: 16px}
+.circleblk:before { border: 8px solid #ad4d38;}
+.sec2 .bannerttl {  font-size: 25px;}
+.subheading {  font-size: 19px;  margin-bottom: 20px;}
+
+
+/*section 3 open      */ 
+.common-padding{padding: 40px 0} 
+.halfcricle{width: 120px; height: 120px; font-size: 16px; font-weight: 400}
+.halfcricle:after { width: 140px; height: 140px;}
+.sec4 .bannerttl {  font-size: 25px;}
+
+
+
+/*section 4 open      */  
+.sec2padding { padding:40px 15px;}     
+.secdflex{flex-wrap: wrap; justify-content:space-between;}
+.sec3width{width: 45%; margin-right: 1%; margin-bottom: 30px} 
+p{font-size: 14px} 
+.sec3hed {font-size: 16px}
+.bulletblk li{font-size: 14px}
+.circleblk { width: 80px;  height: 80px;  border: 2px solid #fff; font-size: 16px}
+.circleblk:before { border: 8px solid #ad4d38;}
+.sec5 .bannerttl {  font-size: 25px;}
+.subheading {  font-size: 19px;  margin-bottom: 20px;}
+.police-width { width: 48%;}
+
+
+
+
+
+/*section5   */
+      .common-padding{padding: 40px 15px}
+      .sec6 .bannerttl{font-size:25px}
+      .approach-width { width: 24%;  padding: 30px 0;  position: relative;}
+      .approach-width:before {top: 55px}
+      .sec6right{width: 100%; margin-top: 20px}
+      p {  font-size: 14px;}
+      .contemar20 { margin-bottom: 10px;}
+      .approachtxt{font-size: 14px}
+
+
+}
+
+@media screen and (max-device-width: 650px) and (orientation: portrait) {   
+    
+}
+@media screen and (max-width:650px) {
+   
+}
+@media screen and (max-width:600px) {
+   
+}
+@media screen and (max-width:540px) {
+  
+  /*section 2 open      */      
+.secdflex{flex-wrap: wrap; justify-content:space-between;}
+.sec3width{width: 100%; margin-right: 0%; margin-bottom: 20px}  
+/*section 5 open      */    
+.approach-width { width: 45%;  padding: 30px 0;  position: relative;}
+.history-slider .slick-prev, .history-slider .slick-next { top: 108px;}
+.text-left
+{
+text-align:left !important;
+}
+p, .subheading
+{
+text-align:left !important;
+}
+.arrowicon1{ margin: 30px auto 75px; text-align: center; }
+.sec4 .secdflex{margin-left: 0: }
+
+.arrowicon1 img{transform: rotate(90deg);
+    width: 100px;
+}
+
+.sec3width:first-child .arrowicon1{display: none;}
+
+.tabblk a{font-size: 14px}
+
+}
+@media screen and (max-width:480px) {
+  
+  /*section 3 open      */  
+  .sec4width { width: 100%;  margin: 20px 0;}
+  .media-box-title, .esg-23 li a{font-size: 14px !important} 
+  .police-width{width: 100%}
+  .bannerttl {  font-size: 25px;}
+}
+
+
+@media screen and (max-width:400px) {
+  .tabblk a{font-size: 13px}
+}
+
+@media screen and (max-width:360px) {
+ }

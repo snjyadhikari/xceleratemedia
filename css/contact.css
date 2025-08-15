@@ -1,0 +1,91 @@
+.contactInfo {
+    position: relative;
+    width: 50%;
+}
+
+.contactInfo h3 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.addressBox {
+    background-color: rgba(255,255,255,0.9);
+    padding: 35px;
+    display: table;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    max-width: 400px;
+    min-width: 400px;
+}
+
+.addressBox h4 {
+    font-size: 2.6rem;
+    color: #1813af;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.addressBox p {
+    font-size: 1.8rem;
+    color: #191919;
+    
+}
+
+.addressBox p:not(:last-child){
+    margin-bottom: 15px;
+}
+
+.addressBox a {
+    font-size: 2.6rem;
+    color: #1813af;
+    display: block;
+    text-transform: lowercase;
+    /* margin-bottom: 10px; */
+}
+
+.contactInfo-left {
+    text-align: center
+}
+
+.contactInfo-left img {
+    max-width: 50%;
+        opacity: 0.8;
+}
+
+
+@media(max-width: 991px) {
+    .contactInfo {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .addressBox {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .internalBanners {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .contactInfo-left {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .addressBox a {
+        font-size: 2rem;
+    }
+
+    .contactInfo-right {
+        margin-bottom: 50px;
+    }
+
+    .contactInfo-left img {
+        max-width: 80%;
+    }
+}

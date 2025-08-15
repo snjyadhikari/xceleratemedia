@@ -1,0 +1,181 @@
+@import 'internal-banner.css';
+
+
+.trueNorthPrograms {
+    position: relative;
+        padding-top: 80px;
+}
+
+.trueNorthPrograms h2 {
+    color: #ffffff;
+    font-size: 5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.analystPrograme {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    /* margin: 50px auto 0; */
+    float: none !important;
+}
+
+.analystPrograme h3 {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.analystPrograme p {
+    font-size: 2rem;
+    color: #ffffff;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.analystPrograme-Box {
+    background-color: #ffffff;
+    padding: 30px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    background-image: url(../images/double-quotes.svg);
+    background-repeat: no-repeat;
+    background-position: top left 30px;
+    /* background-size: contain; */
+}
+
+.analystSlide .para p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #191919;
+}
+
+.analystSlider .owl-dots {
+    position: absolute;
+    bottom: -75px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.profile img {
+    max-width: 100px !important;
+    background-color: grey;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.profile p {
+    color: #3E3F41;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+
+.profile p strong {
+    font-weight: 600;
+}
+
+.profile p span {
+    display: block;
+}
+
+.mgmt-programme h3 {
+    color: #191919;
+}
+
+.mgmt-programme p {
+    color: #3E3F41;
+}
+
+.mgmt-programme .analystSlide .para p, .mgmt-programme .profile p {
+    color: #ffffff;
+}
+
+.analystPrograme-right .btnGroup li {
+        width: 178px !important;
+        padding: 10px 20px !important;
+    }
+.analystPrograme-right .btnGroup {
+    margin-top: 2rem;
+}
+    .analystPrograme-right .btnGroup p {
+        margin-bottom: 0 !important;
+        color: #ffffff;
+    }
+
+    .analystPrograme-right .btnGroup ul {
+        background-color: #3796D3;
+        border: 2px solid #3796D3;
+    }
+
+
+@media(max-width: 991px) {
+    .trueNorthPrograms h2 {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    .analystPrograme h3 {
+        font-size: 2.4rem !important;
+    }
+
+    .analystPrograme p, .analystSlide .para p {
+        font-size: 1.4rem;
+    }
+
+    .analystPrograme-left {
+        margin-bottom: 50px;
+    }
+
+    .profile {
+        flex-wrap: wrap;
+    }
+
+    .profile img {
+        width: 100%;
+        margin: 0 auto 15px;
+    }
+
+    .profile p, .mgmt-programme .profile p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .analystPrograme-Box {
+        padding: 30px 25px;
+    }
+
+    .analystSlide .para p {
+        height: auto !important;
+    }
+}
+
+
+@media(min-width: 992px) {
+    .internalBanners {
+        align-items: flex-end !important;
+    }
+
+    .internalBanners .bannerCaption {
+        float: right;
+        max-width: 450px !important;
+        margin-bottom: 100px ;
+    }
+}
+@media(min-width: 1200px) {}
+@media(min-width: 1900px) {
+    .internalBanners .bannerCaption {
+        float: right;
+        max-width: 600px !important;
+        margin-bottom: 100px ;
+    }
+}

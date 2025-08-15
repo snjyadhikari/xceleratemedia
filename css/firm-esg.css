@@ -1,0 +1,48 @@
+@import 'internal-banner.css';
+@import 'investment.css';
+@import 'history.css';
+@import 'values.css';
+@import 'lifeattruenorth.css';
+
+
+.indiavaluefund {
+    column-count: 2;
+    column-gap: 10rem;
+}
+
+.indiavaluefund h2 {
+    font-size: 4rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.indiavaluefund h2 span {
+    color: #3897D5;
+}
+
+.indiavaluefund p {
+        font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.global-pe-left p, .global-pe-left a {
+    margin-bottom: 2rem;
+}
+
+
+@media(max-width: 991px) {
+    .indiavaluefund {
+        column-count: 1;
+        padding: 0 15px !important;
+    }
+
+    .indiavaluefund h2 {
+        font-size: 2rem;
+    }
+
+    .indiavaluefund p {
+        font-size: 1.6rem;
+    }
+}
