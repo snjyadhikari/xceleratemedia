@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="./fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/app.css" />
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/people.css">
+    <link rel="stylesheet" href="./css/peoplesection.css">
+    <link rel="stylesheet" href="./css/people-page.css">
+    <link rel="stylesheet" href="./css/ag-people.css">
+    <link rel="stylesheet" href="./css/mediaBoxes.css">
     <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="./css/bootstrap-select.min.css">
     <link rel="stylesheet" href="./css/search.css">
@@ -54,6 +59,282 @@
             .ag-loader .loaderWrapper p { font-size: 3rem; }
         }
     </style>
+    <style>
+    body {
+        overflow: visible !important;
+    }
+
+    .media-box-image {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        /* background-color: rgba(56,151,213, 0.3); */
+        background-color: rgba(255, 255, 255, 0.3);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .thumbnail-overlay {
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        overflow: hidden;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+
+        filter: gray;
+        -webkit-filter: grayscale(1);
+        filter: grayscale(1);
+        /* background-color: #b7b7b7; */
+    }
+
+    .media-box-container:hover .media-box-image .thumbnail-overlay,
+    .media-box-container:focus .media-box-image .thumbnail-overlay {
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        transform: scale(0.8);
+
+        -webkit-filter: grayscale(0) !important;
+        filter: none !important;
+    }
+
+    .media-box-content:hover .media-box-image .thumbnail-overlay {
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        transform: scale(0.8);
+
+        -webkit-filter: grayscale(0) !important;
+        filter: none !important;
+    }
+
+    .media-box-content h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 15px;
+    }
+
+    .media-box-content {
+        background-color: transparent !important;
+    }
+
+    .media-box-content p {
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #ffffff;
+        margin-bottom: 15px;
+        height: 17px;
+    }
+
+    .media-boxes-load-more-button {
+        background-color: transparent !important;
+        color: #ffffff !important;
+        border: 2px solid #ffffff !important;
+        -webkit-border-radius: 30px !important;
+        -moz-border-radius: 30px !important;
+        border-radius: 30px !important;
+        padding: 15px 15px 10px 15px !important;
+        line-height: 10px !important;
+        font-weight: 700;
+        display: block !important;
+    }
+
+    .am-btn {
+        transition: all 0.5s;
+    }
+
+    .media-box-container:hover .am-btn,
+    .media-box-container:focus .am-btn {
+        transform:
+            -webkit-transform: translateX(-50%) rotate(360deg);
+        -moz-transform: translateX(-50%) rotate(360deg);
+        transform: translateX(-50%) rotate(360deg);
+    }
+
+    .media-boxes-checkboxes-label {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .media-boxes-checkboxes-checkmark {
+        top: 2px;
+    }
+
+    #search:focus {
+        opacity: 0.7;
+    }
+
+    .am-btn1 {
+        top: 5px !important;
+    }
+
+    /* .thumbnail-overlay {
+        background: rgb(107,107,107);
+        background: linear-gradient(90deg, rgba(107,107,107,1) 0%, rgba(107,107,107,1) 35%, rgba(165,165,165,1) 100%);
+    } */
+
+    .thumbnail-overlay>div.aligment>div.aligment {
+        padding: 0;
+    }
+
+    .media-box .media-box-image img {
+        background: #b7b7b7;
+        /* background: linear-gradient(90deg, rgba(107,107,107,1) 0%, rgba(107,107,107,1) 35%, rgba(165,165,165,1) 100%); */
+    }
+
+    .media-box-content {
+        padding: 20px 0;
+    }
+
+    .media-boxes-drop-down {
+        width: 100%;
+        border: none !important;
+    }
+
+    .media-boxes-drop-down-header {
+        width: 100%;
+        /* height: 60px; */
+        /* line-height: 60px; */
+        border: 1px solid #DEDEDE;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        padding: 7px 25px !important;
+        background-color: #ffffff;
+        font-size: 1.6rem;
+        color: #3E3F41;
+        position: relative;
+        cursor: pointer;
+        height: auto
+    }
+
+    .media-boxes-drop-down-menu>li>a {
+        border: none;
+        font-size: 14px;
+        position: relative;
+    }
+
+    .media-boxes-drop-down-menu>li>a::before,
+    .media-boxes-drop-down-menu>li>a::after {
+        content: '';
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        border: 1px solid #707070;
+        transition: background-color 0.3s ease;
+        position: absolute;
+        left: 8px;
+        top: 10px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    .media-boxes-drop-down-header .fa-sort-desc {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-image: url(../wp-content/themes/truenorth/images/filter-plus.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 34px;
+        right: 15px;
+    }
+
+    .fa-sort-down:before,
+    .fa-sort-desc:before {
+        content: none !important;
+    }
+
+    .media-boxes-drop-down-header .fa {
+        float: right;
+        height: 34px;
+        line-height: 31px;
+    }
+
+    .media-boxes-drop-down-header .fa-sort-desc {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .media-boxes-drop-down-menu>li>a.select::after {
+        content: "\f00c" !important;
+        background-color: #6DB5A1 !important;
+        border-color: transparent !important;
+        font-family: FontAwesome;
+        color: #ffffff;
+    }
+
+    .media-boxes-drop-down:hover .media-boxes-drop-down-header,
+    .media-boxes-drop-down:focus .media-boxes-drop-down-header {
+        background-color: #3E3F41;
+        border-color: #3E3F41;
+        color: #ffffff !important;
+    }
+
+    /* .media-boxes-drop-down-header:hover, .media-boxes-drop-down-header:focus {
+        color: #ffffff !important;
+    } */
+
+    .media-boxes-drop-down-header .fa-sort-desc {
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+	
+	
+
+    .media-boxes-drop-down:hover .media-boxes-drop-down-header .fa-sort-desc,
+    .media-boxes-drop-down:focus .media-boxes-drop-down-header .fa-sort-desc {
+        -webkit-transform: translateY(-50%) rotate(45de);
+        -moz-transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(45deg);
+        background-image: url(../wp-content/themes/truenorth/images/filter-cross.png);
+    }
+
+    .media-boxes-drop-down-menu li:first-child {
+        display: none;
+    }
+
+    .girddd {
+        overflow: hidden;
+    }
+
+.peopleSection{padding:100px 0}
+
+    @media(min-width: 1200px) {
+        .bsss {
+            height: auto;
+        }
+
+        .ag-filter-child ul li {
+            font-size: 12px;
+        }
+    }
+
+    @media(min-width: 1600px) {
+
+        .ag-filter-child ul li {
+            font-size: 14px;
+        }
+    }
+	
+	 @media(max-width: 767px) {
+        
+		.peopleSection{padding:50px 0}
+    }
+
+</style>
 </head>
 <body>
     <!-- AG-Loader -->
@@ -89,7 +370,7 @@
                             <li class="search"><a href="javascript:void(0);">Search</a></li>
                             <li><a href="contact.html">Contact</a></li>
                             <li><a href="https://investor.xceleratemedia.co.in/" target="_blank">Login</a></li>
-                            <li><a href="https://www.linkedin.com/company/true-north-co./" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/true-north-co./" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </ul>
                     </div>
                 </div>
@@ -148,52 +429,8 @@
             <div class="row">
                 <div class="section peopleSection">
                     <div class="container">
-                        <div class="col-xs-12 col-md-3 peoples-right col-md-push-9">
-                            <div class="rightFilter">
-                                <div class="media-boxes-search">
-                                    <span class="media-boxes-icon"><img src="./images/search-icon.svg" alt=""></span>
-                                    <input type="text" id="searchpeople" placeholder="Search By Member Name" class="searchpeople" />
-                                </div>
-                                <div class="filter-media">
-                                    <h4>Filter Teams By</h4>
-                                    <div class="ag-filter">
-                                        <div class="ag-filter-parent" id="first-filter-btn">
-                                            <p>Business Segments</p>
-                                        </div>
-                                        <div class="ag-filter-child by-sector arrow_box bsss" id="first-filter-dropdown" style="display:none;">
-                                            <ul class="filters" style="display: none;"></ul>
-                                            <ul class="filters filters1">
-                                                <li id="all" data-filter-id="1" data-filter="*">All</li>
-                                                <li id="private-equity" data-filter-id="1" data-filter=".private-equity">Private Equity</li>
-                                                <li id="credit" data-filter-id="1" data-filter=".credit">Private Credit</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="ag-filter">
-                                        <div class="ag-filter-parent" id="second-filter-btn">
-                                            <p>Functions</p>
-                                        </div>
-                                        <div class="ag-filter-child by-function arrow_box" id="second-filter-dropdown" style="display:none;">
-                                            <ul class="filters filters2" data-id="second-filter">
-                                                <li id="second-filter-dropdown-all" data-filter-id="2" data-filter="*">All</li>
-                                                <li id="advisors-board-members" data-filter-id="2" data-filter=".advisors-board-members">Advisors &amp; Board Members</li>
-                                                <li id="senior-leadership-team" data-filter-id="2" data-filter=".senior-leadership-team">Senior Leadership Team</li>
-                                                <li id="management-program" data-filter-id="2" data-filter=".management-program">Management Program</li>
-                                                <li id="investment-partners" data-filter-id="2" data-filter=".investment-partners">Investment Team</li>
-                                                <li id="operating-partners" data-filter-id="2" data-filter=".operating-partners">Operating Team</li>
-                                                <li id="centre-of-excellence" data-filter-id="2" data-filter=".centre-of-excellence">Centre of Excellence</li>
-                                                <li id="corporate-management" data-filter-id="2" data-filter=".corporate-management">Corporate Management</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="filterTags" style="display: none;">
-                                        <a href="javascript:void(0);" style="color: #DD0012; font-weight: 500; margin-bottom: 10px; display: block;" class="filters clearall" data-filter="*">Clear All</a>
-                                        <ul id="menu"></ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-md-8 peoples-left col-md-pull-3 girddd">
+                      
+                        <div class="col-xs-12 col-md-12 peoples-left girddd">
                             <div class="grid-section">
                                 <div class="content grid-container">
                                     <div id="grid1">
@@ -201,11 +438,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/aashna-parmar/index.html"><img loading="lazy" src="../wp-content/uploads/2024/04/Ashna-P-310x310.png" alt=""></a>
+                                                    <a href="./peoples/aashna-parmar/index.html"><img loading="lazy" src="../wp-content/uploads/2024/04/Ashna-P-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/aashna-parmar/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/aashna-parmar/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Aashna Parmar</h2>
@@ -216,11 +453,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/an-roy/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/A_N_Roy2-1-300x300.png" alt=""></a>
+                                                    <a href="./peoples/an-roy/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/A_N_Roy2-1-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/an-roy/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/an-roy/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">A N Roy</h2>
@@ -231,11 +468,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/akshay-soni/index.html"><img loading="lazy" src="../wp-content/uploads/2023/08/akshay-soni-310x310.png" alt=""></a>
+                                                    <a href="./peoples/akshay-soni/index.html"><img loading="lazy" src="../wp-content/uploads/2023/08/akshay-soni-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/akshay-soni/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/akshay-soni/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Akshay Soni</h2>
@@ -246,11 +483,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/anil-choudhary/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Anil-Choudhary-2-310x310.png" alt=""></a>
+                                                    <a href="./peoples/anil-choudhary/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Anil-Choudhary-2-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/anil-choudhary/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/anil-choudhary/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Anil Choudhary</h2>
@@ -261,11 +498,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/chirag-mistry/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Chirag-Mistry-310x310.png" alt=""></a>
+                                                    <a href="./peoples/chirag-mistry/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Chirag-Mistry-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/chirag-mistry/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/chirag-mistry/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Chirag Mistry</h2>
@@ -276,11 +513,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/divya-sehgal/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Divya-S-New-310x310.png" alt=""></a>
+                                                    <a href="./peoples/divya-sehgal/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Divya-S-New-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/divya-sehgal/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/divya-sehgal/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Divya Sehgal</h2>
@@ -291,11 +528,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/diwakar-gupta/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Diwakar_Gupta2-1-300x300.png" alt=""></a>
+                                                    <a href="./peoples/diwakar-gupta/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Diwakar_Gupta2-1-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/diwakar-gupta/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/diwakar-gupta/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Diwakar Gupta</h2>
@@ -306,11 +543,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/gaurav-dalmia/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Gaurav_Dalmia2-1-300x300.png" alt=""></a>
+                                                    <a href="./peoples/gaurav-dalmia/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Gaurav_Dalmia2-1-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/gaurav-dalmia/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/gaurav-dalmia/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Gaurav Dalmia</h2>
@@ -321,11 +558,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/jolly-abraham/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Jolly_7014-310x310.png" alt=""></a>
+                                                    <a href="./peoples/jolly-abraham/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Jolly_7014-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/jolly-abraham/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/jolly-abraham/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Jolly Abraham</h2>
@@ -336,11 +573,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/joylyn-largo-afonso/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Joylyn_Largo-Afonso-300x300.png" alt=""></a>
+                                                    <a href="./peoples/joylyn-largo-afonso/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Joylyn_Largo-Afonso-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/joylyn-largo-afonso/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/joylyn-largo-afonso/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Joylyn Largo-Afonso</h2>
@@ -351,11 +588,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/kapil-singhal/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Kapil-310x310.png" alt=""></a>
+                                                    <a href="./peoples/kapil-singhal/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Kapil-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/kapil-singhal/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/kapil-singhal/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Kapil Singhal</h2>
@@ -366,11 +603,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/khushal-singla/index.html"><img loading="lazy" src="../wp-content/uploads/2025/06/image-310x310.png" alt=""></a>
+                                                    <a href="./peoples/khushal-singla/index.html"><img loading="lazy" src="../wp-content/uploads/2025/06/image-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/khushal-singla/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/khushal-singla/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Khushal Singla</h2>
@@ -381,11 +618,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/kshitij-agrawal/index.html"><img loading="lazy" src="../wp-content/uploads/2024/12/KA-310x310.jpg" alt=""></a>
+                                                    <a href="./peoples/kshitij-agrawal/index.html"><img loading="lazy" src="../wp-content/uploads/2024/12/KA-310x310.jpg" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/kshitij-agrawal/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/kshitij-agrawal/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Kshitij Agrawal</h2>
@@ -396,11 +633,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/maninder-singh-juneja/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Maninder-Juneja-1-310x310.png" alt=""></a>
+                                                    <a href="./peoples/maninder-singh-juneja/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Maninder-Juneja-1-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/maninder-singh-juneja/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/maninder-singh-juneja/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Maninder Singh Juneja</h2>
@@ -411,11 +648,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/mayank-mishra/index.html"><img loading="lazy" src="../wp-content/uploads/2022/04/Mayank_7124-310x310.png" alt=""></a>
+                                                    <a href="./peoples/mayank-mishra/index.html"><img loading="lazy" src="../wp-content/uploads/2022/04/Mayank_7124-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/mayank-mishra/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/mayank-mishra/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Mayank Mishra</h2>
@@ -426,11 +663,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/mukund-maheshwari/index.html"><img loading="lazy" src="../wp-content/uploads/2022/06/Mukund_6799-310x310.png" alt=""></a>
+                                                    <a href="./peoples/mukund-maheshwari/index.html"><img loading="lazy" src="../wp-content/uploads/2022/06/Mukund_6799-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/mukund-maheshwari/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/mukund-maheshwari/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Mukund Maheshwari</h2>
@@ -441,11 +678,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/murry-stegelmann/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Murry_Stegelman2-1-300x300.png" alt=""></a>
+                                                    <a href="./peoples/murry-stegelmann/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Murry_Stegelman2-1-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/murry-stegelmann/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/murry-stegelmann/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Murry Stegelmann</h2>
@@ -456,11 +693,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/narayan-sunil/index.html"><img loading="lazy" src="../wp-content/uploads/2022/01/Narayan-Sunil-1-310x310.png" alt=""></a>
+                                                    <a href="./peoples/narayan-sunil/index.html"><img loading="lazy" src="../wp-content/uploads/2022/01/Narayan-Sunil-1-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/narayan-sunil/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/narayan-sunil/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Narayan Sunil</h2>
@@ -471,11 +708,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/niti-shah/index.html"><img loading="lazy" src="../wp-content/uploads/2025/04/Niti--310x310.png" alt=""></a>
+                                                    <a href="./peoples/niti-shah/index.html"><img loading="lazy" src="../wp-content/uploads/2025/04/Niti--310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/niti-shah/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/niti-shah/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Niti Shah</h2>
@@ -486,11 +723,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/nikita-sharma/index.html"><img loading="lazy" src="../wp-content/uploads/2024/06/ns-310x310.png" alt=""></a>
+                                                    <a href="./peoples/nikita-sharma/index.html"><img loading="lazy" src="../wp-content/uploads/2024/06/ns-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/nikita-sharma/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/nikita-sharma/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Nikita Sharma</h2>
@@ -501,11 +738,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/nitin-nayak/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Nitin-Nayak-1-310x310.png" alt=""></a>
+                                                    <a href="./peoples/nitin-nayak/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Nitin-Nayak-1-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/nitin-nayak/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/nitin-nayak/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Nitin Nayak</h2>
@@ -516,11 +753,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/ojas-acharya/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Ojas-Acharya-2-310x310.png" alt=""></a>
+                                                    <a href="./peoples/ojas-acharya/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Ojas-Acharya-2-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/ojas-acharya/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/ojas-acharya/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Ojas Acharya</h2>
@@ -531,11 +768,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/peter-keenoy/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Peter_Keenoy2-1-300x300.png" alt=""></a>
+                                                    <a href="./peoples/peter-keenoy/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Peter_Keenoy2-1-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/peter-keenoy/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/peter-keenoy/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Peter Keenoy</h2>
@@ -546,11 +783,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/pramod-kabra/index.html"><img loading="lazy" src="../wp-content/uploads/2021/09/Pramod_Kabra2-3-300x300.png" alt=""></a>
+                                                    <a href="./peoples/pramod-kabra/index.html"><img loading="lazy" src="../wp-content/uploads/2021/09/Pramod_Kabra2-3-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/pramod-kabra/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/pramod-kabra/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Pramod Kabra</h2>
@@ -561,11 +798,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/prasad-thrikutam/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Prasad-Thrikutam-1-310x310.png" alt=""></a>
+                                                    <a href="./peoples/prasad-thrikutam/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Prasad-Thrikutam-1-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/prasad-thrikutam/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/prasad-thrikutam/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Prasad Thrikutam</h2>
@@ -576,11 +813,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/r-laxminarayan/index.html"><img loading="lazy" src="../wp-content/uploads/2025/02/trace-02-1-New-310x310.png" alt=""></a>
+                                                    <a href="./peoples/r-laxminarayan/index.html"><img loading="lazy" src="../wp-content/uploads/2025/02/trace-02-1-New-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/r-laxminarayan/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/r-laxminarayan/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">R. Laxminarayan</h2>
@@ -591,11 +828,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/parameshwaran-iyer/index.html"><img loading="lazy" src="../wp-content/uploads/2024/07/new-310x310.png" alt=""></a>
+                                                    <a href="./peoples/parameshwaran-iyer/index.html"><img loading="lazy" src="../wp-content/uploads/2024/07/new-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/parameshwaran-iyer/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/parameshwaran-iyer/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Parmeshawaran Iyer (Param)</h2>
@@ -606,11 +843,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/rahul-kapani/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Rahul-Kapani-2-310x310.png" alt=""></a>
+                                                    <a href="./peoples/rahul-kapani/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Rahul-Kapani-2-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/rahul-kapani/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/rahul-kapani/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Rahul Kapani</h2>
@@ -621,11 +858,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/rahul-mehta/index.html"><img loading="lazy" src="../wp-content/uploads/2024/04/RMPic-310x310.png" alt=""></a>
+                                                    <a href="./peoples/rahul-mehta/index.html"><img loading="lazy" src="../wp-content/uploads/2024/04/RMPic-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/rahul-mehta/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/rahul-mehta/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Rahul Mehta</h2>
@@ -636,11 +873,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/rajeev-kher/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Rajeev_Kher2-1-300x300.png" alt=""></a>
+                                                    <a href="./peoples/rajeev-kher/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Rajeev_Kher2-1-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/rajeev-kher/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/rajeev-kher/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Rajeev Kher</h2>
@@ -651,11 +888,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/rikhil-wadhwa/index.html"><img loading="lazy" src="../wp-content/uploads/2024/09/new-magerw-310x310.png" alt=""></a>
+                                                    <a href="./peoples/rikhil-wadhwa/index.html"><img loading="lazy" src="../wp-content/uploads/2024/09/new-magerw-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/rikhil-wadhwa/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/rikhil-wadhwa/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Rikhil Wadhwa</h2>
@@ -666,11 +903,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/rajagopalan-santhanam/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Santhanam-Rajagopalan-1-310x310.png" alt=""></a>
+                                                    <a href="./peoples/rajagopalan-santhanam/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Santhanam-Rajagopalan-1-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/rajagopalan-santhanam/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/rajagopalan-santhanam/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Rajagopalan Santhanam</h2>
@@ -681,11 +918,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/satish-chander/index.html"><img loading="lazy" src="../wp-content/uploads/2021/09/Satish_Chander-300x300.png" alt=""></a>
+                                                    <a href="./peoples/satish-chander/index.html"><img loading="lazy" src="../wp-content/uploads/2021/09/Satish_Chander-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/satish-chander/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/satish-chander/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Satish Chander</h2>
@@ -696,11 +933,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/srikrishna-dwaram/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Srikrishna-Dwaram-2-310x310.png" alt=""></a>
+                                                    <a href="./peoples/srikrishna-dwaram/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Srikrishna-Dwaram-2-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/srikrishna-dwaram/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/srikrishna-dwaram/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Srikrishna Dwaram</h2>
@@ -711,11 +948,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/sumeet-khanna/index.html"><img loading="lazy" src="../wp-content/uploads/2023/06/sumeet-310x310.png" alt=""></a>
+                                                    <a href="./peoples/sumeet-khanna/index.html"><img loading="lazy" src="../wp-content/uploads/2023/06/sumeet-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/sumeet-khanna/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/sumeet-khanna/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Sumeet Khanna</h2>
@@ -726,11 +963,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/suresh-talwar/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Suresh_Talwar2-1-300x300.png" alt=""></a>
+                                                    <a href="./peoples/suresh-talwar/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Suresh_Talwar2-1-300x300.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/suresh-talwar/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/suresh-talwar/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Suresh Talwar</h2>
@@ -741,11 +978,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/sushim-desai/index.html"><img loading="lazy" src="../wp-content/uploads/2021/08/Sushim-Desai-1-310x310.png" alt=""></a>
+                                                    <a href="./peoples/sushim-desai/index.html"><img loading="lazy" src="../wp-content/uploads/2021/08/Sushim-Desai-1-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/sushim-desai/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/sushim-desai/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Sushim Desai</h2>
@@ -756,11 +993,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/swati-sarda/index.html"><img loading="lazy" src="../wp-content/uploads/2022/11/Swati_6989-310x310.png" alt=""></a>
+                                                    <a href="./peoples/swati-sarda/index.html"><img loading="lazy" src="../wp-content/uploads/2022/11/Swati_6989-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/swati-sarda/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/swati-sarda/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Swati Sarda</h2>
@@ -770,12 +1007,12 @@
                                         <div class="media-box red round letter  investment-partners  private-equity allpeople">
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
-                                                <div class="thumbnail-overlay overlay-always-visible"></div>
-                                                    <a href="../peoples/tushara-garg/index.html"><img loading="lazy" src="../wp-content/uploads/2021/11/Tushara-Garg-1-310x310.png" alt=""></a>
+                                                <div class="thumbnail-overlay overlay-always-visible">
+                                                    <a href="./peoples/tushara-garg/index.html"><img loading="lazy" src="../wp-content/uploads/2021/11/Tushara-Garg-1-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/tushara-garg/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/tushara-garg/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Tushara Garg</h2>
@@ -786,11 +1023,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/unnati-pankhaniya/index.html"><img loading="lazy" src="../wp-content/uploads/2025/04/unt-310x310.png" alt=""></a>
+                                                    <a href="./peoples/unnati-pankhaniya/index.html"><img loading="lazy" src="../wp-content/uploads/2025/04/unt-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/unnati-pankhaniya/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/unnati-pankhaniya/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Unnati Pankhaniya</h2>
@@ -801,11 +1038,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/varun-nabar/index.html"><img loading="lazy" src="../wp-content/uploads/2023/10/Varun-New-310x310.png" alt=""></a>
+                                                    <a href="./peoples/varun-nabar/index.html"><img loading="lazy" src="../wp-content/uploads/2023/10/Varun-New-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/varun-nabar/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/varun-nabar/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Varun Nabar</h2>
@@ -816,11 +1053,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/vagisha-anant/index.html"><img loading="lazy" src="../wp-content/uploads/2025/04/vpic-310x310.png" alt=""></a>
+                                                    <a href="./peoples/vagisha-anant/index.html"><img loading="lazy" src="../wp-content/uploads/2025/04/vpic-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/vagisha-anant/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/vagisha-anant/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Vagisha Anant</h2>
@@ -830,12 +1067,12 @@
                                         <div class="media-box red round letter  centre-of-excellence  private-equity credit impact allpeople">
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
-                                                <div class="thumbnail-overlay overlay-always-visible"></div>
-                                                    <a href="../peoples/vidushi-bhatt/index.html"><img loading="lazy" src="../wp-content/uploads/2022/01/vidushi_6827-310x310.png" alt=""></a>
+                                                <div class="thumbnail-overlay overlay-always-visible">
+                                                    <a href="./peoples/vidushi-bhatt/index.html"><img loading="lazy" src="../wp-content/uploads/2022/01/vidushi_6827-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/vidushi-bhatt/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/vidushi-bhatt/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Vidushi Bhatt</h2>
@@ -846,11 +1083,11 @@
                                             <div class="media-box-image ">
                                                 <div data-width="1" data-height="1" data-thumbnail="none"></div>
                                                 <div class="thumbnail-overlay overlay-always-visible">
-                                                    <a href="../peoples/vishal-nevatia/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Vishal_6842-310x310.png" alt=""></a>
+                                                    <a href="./peoples/vishal-nevatia/index.html"><img loading="lazy" src="../wp-content/uploads/2021/06/Vishal_6842-310x310.png" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="media-box-content text-center">
-                                                <a href="../peoples/vishal-nevatia/index.html" class="am-btn am-btn1">
+                                                <a href="./peoples/vishal-nevatia/index.html" class="am-btn am-btn1">
                                                     <img loading="lazy" src="./images/plus.svg" alt="">
                                                 </a>
                                                 <h2 class="media-box-title">Vishal Nevatia</h2>
@@ -919,7 +1156,9 @@
                 </footer>
             </div>
         </div>
+        
     </div>
+    
     <!-- Scripts -->
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
@@ -943,94 +1182,8 @@
     <script src="./js/bootstrap-select.min.js"></script>
     <script src="./js/init.js"></script>
     <script>
-        $(document).ready(function(){
-            $(".peopleLink").addClass("activate");
-            $(".header").addClass("whiteHeader");
-            $("#grid1").mediaBoxes({
-                multipleFilterLogic: "AND",
-                filterContainer: ".filters",
-                search: "#searchpeople",
-                searchTarget: ".media-box-title",
-                boxesToLoadStart: 50,
-                boxesToLoad: 6,
-                columns: 3,
-                minBoxesPerFilter: 6,
-                popup: "none",
-                horizontalSpaceBetweenBoxes: 60,
-                verticalSpaceBetweenBoxes: 60,
-                deepLinkingOnFilter: false,
-                loadMoreWord: '<i class="fa fa-plus" aria-hidden="true"></i> More',
-                lazyLoad: true,
-                noMoreEntriesWord: "No More People Found"
-            });
-            // Filter logic
-            $(".filters1 li").click(function(){
-                $(".filters1 li").removeClass("checked");
-                $(this).addClass("checked");
-                $("#menu").html("");
-                $(".filters").find("li").each(function(){
-                    let t = $(this).attr("data-filter").replace(".", "", $(this).attr("data-filter"));
-                    let i = $(this).attr("data-filter-id");
-                    if ($(this).hasClass("checked") && $(this).text() !== "All") {
-                        $("#menu").append(`<li id="${t}"><a href="javascript:void(0);" data-filter="${$(this).attr("data-filter")}" data-filter-id="${i}" class="filters-close"><span>${$(this).text()}</span></a></li>`);
-                    }
-                });
-                $("#first-filter-dropdown").hide();
-                $(".ag-filter-parent").removeClass("open");
-                $(".filterTags").show();
-            });
-            $(".filters2 li").click(function(){
-                $(".filters2 li").removeClass("checked");
-                $(this).addClass("checked");
-                $("#menu").html("");
-                $(".filters").find("li").each(function(){
-                    let t = $(this).attr("data-filter").replace(".", "", $(this).attr("data-filter"));
-                    let i = $(this).attr("data-filter-id");
-                    if ($(this).hasClass("checked") && $(this).text() !== "All") {
-                        $("#menu").append(`<li id="${t}"><a href="javascript:void(0);" data-filter="${$(this).attr("data-filter")}" data-filter-id="${i}" class="filters-close"><span>${$(this).text()}</span></a></li>`);
-                    }
-                });
-                $("#second-filter-dropdown").hide();
-                $(".ag-filter-parent").removeClass("open");
-                $(".filterTags").show();
-            });
-            $("#menu").on("click", ".filters-close", function(){
-                let e = $(this).attr("data-filter").replace(".", "", $(this).attr("data-filter"));
-                $("#" + e).removeClass("checked selected");
-                $(this).parent().remove();
-                if ($(this).attr("data-filter-id") == "1") {
-                    $("#all").trigger("click");
-                } else {
-                    $("#second-filter-dropdown-all").trigger("click");
-                }
-                $(".filters").find("li").each(function(){
-                    if ($(this).hasClass("selected")) {
-                        $(this).trigger("click");
-                    }
-                });
-                if ($("ul#menu li").length == 0) {
-                    $(".filterTags").hide();
-                }
-            });
-            $(".clearall").click(function(){
-                $("#menu").empty();
-                $("#all").trigger("click");
-                $("#second-filter-dropdown-all").trigger("click");
-                $(".filterTags").hide();
-            });
-            $("#first-filter-btn").click(function(){
-                $("#second-filter-btn").removeClass("open");
-                $(this).toggleClass("open");
-                $("#second-filter-dropdown").hide();
-                $("#first-filter-dropdown").toggle();
-            });
-            $("#second-filter-btn").click(function(){
-                $("#first-filter-btn").removeClass("open");
-                $(this).toggleClass("open");
-                $("#first-filter-dropdown").hide();
-                $("#second-filter-dropdown").toggle();
-            });
-        });
-    </script>
+    $(document).ready(function(){$(".peopleLink").addClass("activate"),$(".header").addClass("whiteHeader"),$("#grid1").mediaBoxes({multipleFilterLogic:"AND",filterContainer:".filters",search:"#searchpeople",searchTarget:".media-box-title",boxesToLoadStart:50,boxesToLoad:6,columns:4,minBoxesPerFilter:6,popup:"none",horizontalSpaceBetweenBoxes:60,verticalSpaceBetweenBoxes:60,deepLinkingOnFilter:!1,loadMoreWord:'<i class="fa fa-plus" aria-hidden="true"></i> More',lazyLoad:!0,noMoreEntriesWord:"No More People Found"}),$(".first-filter li a").click(function(){$(".first-filter li a").removeClass("select"),$(this).addClass("select")}),$(".second-filter li a").click(function(){$(".second-filter li a").removeClass("select"),$(this).addClass("select")}),$(".filterInput").click(function(){$(this).toggleClass("open"),$(".filterPlus").toggleClass("rotate"),$(".filterMediaSelect").slideToggle()}),$(".filters1 li").click(function(){console.log($(this).text()),$(".filters1 li").removeClass("checked"),$(this).addClass("checked"),$("#menu").html(""),$(".filters").find("li").each(function(e){let t=$(this).attr("data-filter").replace(".","",$(this).attr("data-filter")),i=$(this).attr("data-filter-id");$(this).hasClass("checked")&&"All"!=$(this).text()&&$("#menu").append(`<li id="${t}"><a href="javascript:void(0);" data-filter="${$(this).attr("data-filter")}" data-filter-id="${i}" class="filters-close"><span>${$(this).text()}</span></a></li>`)}),$("#first-filter-dropdown").hide(),$(".ag-filter-parent").removeClass("open"),$(".filterTags").show()}),$(".filters2 li").click(function(){console.log($(this).text()),$(".filters2 li").removeClass("checked"),$(this).addClass("checked"),$("#menu").html(""),$(".filters").find("li").each(function(e){let t=$(this).attr("data-filter").replace(".","",$(this).attr("data-filter")),i=$(this).attr("data-filter-id");$(this).hasClass("checked")&&"All"!=$(this).text()&&$("#menu").append(`<li id="${t}"><a href="javascript:void(0);" data-filter="${$(this).attr("data-filter")}" data-filter-id="${i}" class="filters-close"><span>${$(this).text()}</span></a></li>`)}),$("#second-filter-dropdown").hide(),$(".ag-filter-parent").removeClass("open"),$(".filterTags").show()}),$("#menu").on("click",".filters-close",function(){let e=$(this).attr("data-filter").replace(".","",$(this).attr("data-filter"));$("#"+e).removeClass("checked selected"),$(this).parent().remove(),"1"==$(this).attr("data-filter-id")?$("#all").trigger("click"):$("#second-filter-dropdown-all").trigger("click"),$(".filters").find("li").each(function(e){$(this).hasClass("selected")&&(console.log($(this).text()),$(this).trigger("click"))}),0==$("ul#menu li").length&&$(".filterTags").hide(),console.log(e)}),$(".clearall").click(function(){$("#menu").empty(),$("#all").trigger("click"),$("#second-filter-dropdown-all").trigger("click"),$(".filterTags").hide()}),$(".media-boxes-checkboxes-label").click(function(){$(".clearall").show()}),setTimeout(function(){},1e3),$("#first-filter-btn").click(function(){$("#second-filter-btn").removeClass("open"),$(this).toggleClass("open"),$("#second-filter-dropdown").hide(),$("#first-filter-dropdown").toggle()}),$("#second-filter-btn").click(function(){$("#first-filter-btn").removeClass("open"),$(this).toggleClass("open"),$("#first-filter-dropdown").hide(),$("#second-filter-dropdown").toggle()}),$(".by-sector ul li").click(function(){$(".by-sector ul li").removeClass("checked"),$(this).addClass("checked")}),$(".by-function ul li").click(function(){$(".by-function ul li").removeClass("checked"),$(this).addClass("checked")})});
+
+</script>
 </body>
 </html>
