@@ -35,7 +35,7 @@ body{ margin: 0px;padding: 0; font-family: 'Poppins', sans-serif; background: #f
 .text-right{text-align: right}
 .clear{clear: both;}
 .container {width:89%;margin: 0 auto;}
-.sprite{background: url(../images/sprite.html) no-repeat 0 0}
+.sprite{background: url(./images/sprite.html) no-repeat 0 0}
 .blackoverlay{position: fixed;top: 0;left: 0;height: 100%;width: 100%;z-index: 999;background: rgba(0, 0, 0, 0.6);display: none}
 .ibvm{display:inline-block;vertical-align:middle; font-family: DinishRegular; font-size: 25px;position: relative;}
 
@@ -142,7 +142,7 @@ body{ margin: 0px;padding: 0; font-family: 'Poppins', sans-serif; background: #f
 
 
 .history-slider .slick-prev {
-    background: #ccc url(../images/esg-img/prev.png) no-repeat center;
+    background: #ccc url(./images/esg-img/prev.png) no-repeat center;
     width: 40px;
     height: 40px;
     left: -3%;
@@ -150,7 +150,7 @@ body{ margin: 0px;padding: 0; font-family: 'Poppins', sans-serif; background: #f
     border-radius: 50%;
 }
 .history-slider .slick-next {
-    background: #ccc url(../images/esg-img/next2.png) no-repeat center;
+    background: #ccc url(./images/esg-img/next2.png) no-repeat center;
     width: 40px;
     height: 40px;
     right: -3%;
@@ -363,7 +363,7 @@ p{font-size: 16px; line-height: 1.5}
     display: block;
     width: 45px;
     height: 45px;
-    background-image: url(../images/external.png);
+    background-image: url(./images/external.png);
     background-repeat: no-repeat;
     background-size: 90%;
     position: absolute;
@@ -412,7 +412,7 @@ p{font-size: 16px; line-height: 1.5}
     content: '';
     width: 40px;
     height: 40px;
-    background-image: url(../images/esg-download.png);
+    background-image: url(./images/esg-download.png);
     background-repeat: no-repeat;
     background-position: center center;
     margin-left: 15px;

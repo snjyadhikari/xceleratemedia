@@ -100,7 +100,7 @@ box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.23);
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url(../images/spt.png);
+    background-image: url(./images/spt.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 80%;

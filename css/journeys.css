@@ -47,7 +47,7 @@ box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16); */
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../images/img-shadow.png);
+    background-image: url(./images/img-shadow.png);
     background-repeat: no-repeat;
     background-position: bottom center;
 }

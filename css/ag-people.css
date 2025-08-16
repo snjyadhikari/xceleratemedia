@@ -84,7 +84,7 @@
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    background-image: url(../images/dash-logo.png);
+    background-image: url(./images/dash-logo.png);
     background-repeat: no-repeat;
     background-size: 86%;
     background-position: center center;
@@ -130,7 +130,7 @@
 }
 
 #sync1.changelogo::after {
-    background-image: url(../images/img-bg.png);
+    background-image: url(./images/img-bg.png);
     background-size: 76%;
     width: 150%;
     height: 150%;

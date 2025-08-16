@@ -63,7 +63,7 @@
     display: block;
     width: 45px;
     height: 45px;
-    background-image: url(../images/external.png);
+    background-image: url(./images/external.png);
     background-repeat: no-repeat;
     background-size: 90%;
     position: absolute;

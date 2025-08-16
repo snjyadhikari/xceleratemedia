@@ -54,7 +54,7 @@ box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.1);
     border-radius: 16px;
     padding: 15px;
 
-    background-image: url(../images/placeholder-landscape.png);
+    background-image: url(./images/placeholder-landscape.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -217,7 +217,7 @@ box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.1);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     transform: translateY(-50%);
-    background-image: url(../images/filter-plus.png);
+    background-image: url(./images/filter-plus.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 34px;
@@ -230,7 +230,7 @@ box-shadow: 0px 20px 30px 0px rgba(0,0,0,0.1);
 }
 
 .media-boxes-drop-down-header.hover .fa-sort-desc {
-    background-image: url(../images/filter-cross.png);
+    background-image: url(./images/filter-cross.png);
 }
 
 

@@ -57,7 +57,7 @@
     position:absolute;
     width:25px;
     height:24px;
-    background-image:url(../images/acc-green-arrow.svg);
+    background-image:url(./images/acc-green-arrow.svg);
     background-repeat:no-repeat;
     background-position:center center;
     transition:all 0.5s;
@@ -86,7 +86,7 @@
     content:'';
     width:25px;
     height:24px;
-    background-image:url(../images/acc-green-arrow.svg);
+    background-image:url(./images/acc-green-arrow.svg);
     background-repeat:no-repeat;
     background-position:center center;
     position:absolute;
@@ -176,7 +176,7 @@
         content:'';
         width:25px;
         height:16px;
-        background-image:url(../images/acc-green-arrow.svg);
+        background-image:url(./images/acc-green-arrow.svg);
         background-repeat:no-repeat;
         background-position:center center;
         position:absolute;

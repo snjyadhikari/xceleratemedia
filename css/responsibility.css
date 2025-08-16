@@ -74,7 +74,7 @@
     content: '';
     width: 40px;
     height: 40px;
-    background-image: url(../images/esg-download.png);
+    background-image: url(./images/esg-download.png);
     background-repeat: no-repeat;
     background-position: center center;
     margin-left: 15px;
@@ -213,7 +213,7 @@
 }
 
 .tnf-imgright {
-    background-image: url(../images/truenorth-foundation.png);
+    background-image: url(./images/truenorth-foundation.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -266,7 +266,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url(../images/Agassi_Bg.png);
+    background-image: url(./images/Agassi_Bg.png);
     background-repeat: no-repeat;
     background-position: bottom center;
     -webkit-border-radius: 18px;

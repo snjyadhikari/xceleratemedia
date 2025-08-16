@@ -178,7 +178,7 @@
 }
 
 .testi-content {
-    background-image: url(../images/quotes.svg);
+    background-image: url(./images/quotes.svg);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 52%;

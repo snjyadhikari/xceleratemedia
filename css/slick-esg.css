@@ -21,14 +21,14 @@
 .slick-prev,.slick-next {font-size: 0;line-height: 0;position: absolute;top: 130px;display: block;width: 20px;height: 20px; margin-top: -10px; padding: 0; cursor: pointer; color: transparent; border: none; outline: none; background: transparent;z-index: 9}
 .slick-prev {
     right: 20px;
-    background: url(../images/arrow.html) no-repeat 0 0;
+    background: url(./images/arrow.html) no-repeat 0 0;
     width: 70px;
     height: 70px;
     background-size: cover;
 }
 .slick-next {
     right: 20px;
-    background: url(../images/arrow.html) no-repeat 0 0;
+    background: url(./images/arrow.html) no-repeat 0 0;
     width: 71px;
     height: 71px;
     background-size: cover;  

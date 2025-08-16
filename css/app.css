@@ -10760,7 +10760,7 @@ a.viewAll::after{
     display:block;
     width:15px;
     height:16px;
-    background-image:url(../images/black-right-arrow.svg);
+    background-image:url(./images/black-right-arrow.svg);
     background-repeat:no-repeat;
     background-position:center center;
     background-size:contain;
@@ -10821,7 +10821,7 @@ a.viewAll:hover::after{
     box-shadow:0px 15px 20px 0px rgba(0,0,0,0.1);
     border-radius:30px;
     transition:all 0.5s;
-    background-image:url(../images/halfcircle-arrow-right.svg);
+    background-image:url(./images/halfcircle-arrow-right.svg);
     background-repeat:no-repeat;
     background-size:22px;
     background-position:right 10px center;
@@ -10980,7 +10980,7 @@ a.viewAll:hover::after{
     display:inline-block;
     width:15px;
     height:20px;
-    background-image:url(../images/search-icon.png);
+    background-image:url(./images/search-icon.png);
     background-repeat:no-repeat;
     position:relative;
     top:4px;
@@ -11067,7 +11067,7 @@ a.viewAll:hover::after{
     background-color:#3897D5;
     box-shadow:0px 2px 5px 0px rgba(0,0,0,0.25);
     border-radius:50%;
-    background-image:url(../images/search-icon.png);
+    background-image:url(./images/search-icon.png);
     background-repeat:no-repeat;
     background-position:center center
 }
@@ -11169,7 +11169,7 @@ a.viewAll:hover::after{
     height: 20px;
     position: absolute;
     top: 50%;
-    background-image: url(../images/search-icon.png);
+    background-image: url(./images/search-icon.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -11271,7 +11271,7 @@ a.viewAll:hover::after{
 }
 
 .mobileMenu.active ul li.active {
-    /* background-image: url(../images/blue-logo.svg);
+    /* background-image: url(./images/blue-logo.svg);
     background-repeat: no-repeat; */
 }
 
@@ -11314,7 +11314,7 @@ a.viewAll:hover::after{
     padding-top:5rem;
     padding-bottom:5rem;
     background-color:#1813af;
-    background:url(../images/footer-bg.png) no-repeat;
+    background:url(./images/footer-bg.png) no-repeat;
     background-size:cover
 }
 .f-animation{
@@ -11439,7 +11439,7 @@ a.viewAll:hover::after{
 
 @media(max-width: 991px) {
     .foot{
-        background:url(../images/footer-bg.png) no-repeat !important;
+        background:url(./images/footer-bg.png) no-repeat !important;
         background-size:cover;
         margin: 0;
     }

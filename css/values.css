@@ -63,16 +63,16 @@
 }
 
 .grid-column .ico.sun1::after {
-    background-image: url(../images/sun1.svg);
+    background-image: url(./images/sun1.svg);
 }
 .grid-column .ico.sun2::after {
-    background-image: url(../images/sun2.svg);
+    background-image: url(./images/sun2.svg);
 }
 .grid-column .ico.sun3::after {
-    background-image: url(../images/sun3.svg);
+    background-image: url(./images/sun3.svg);
 }
 .grid-column .ico.sun4::after {
-    background-image: url(../images/sun4.svg);
+    background-image: url(./images/sun4.svg);
 }
 
 

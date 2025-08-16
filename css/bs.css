@@ -58,7 +58,7 @@
     display:block;
     width:15px;
     height:24px;
-    background-image:url(../images/black-right-arrow.svg);
+    background-image:url(./images/black-right-arrow.svg);
     background-repeat:no-repeat;
     background-position:center center;
     background-size:contain;
@@ -159,7 +159,7 @@
     position:absolute;
     width:25px;
     height:24px;
-    background-image:url(../images/hashnav-arrow.svg);
+    background-image:url(./images/hashnav-arrow.svg);
     background-repeat:no-repeat;
     background-position:center center;
     transition:all 0.5s;
@@ -382,7 +382,7 @@
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
-        background-image: url(../images/halfcircle-arrow-right.svg);
+        background-image: url(./images/halfcircle-arrow-right.svg);
         background-repeat: no-repeat;
         background-position: center center;
     }

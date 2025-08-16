@@ -84,7 +84,7 @@
 } */
 
 .testimonialsHome-left {
-  background-image: url(../images/quotes.svg);
+  background-image: url(./images/quotes.svg);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 60%;

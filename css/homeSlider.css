@@ -39,7 +39,7 @@
 }
 .carouselbg {
     pointer-events: none;
-    background-image: url("../images/new_hero_bg.png");
+    background-image: url("./images/new_hero_bg.png");
     -webkit-animation: bg-scrolling-reverse 25s infinite;
     animation: bg-scrolling-reverse 25s infinite;
     -webkit-animation-timing-function: linear;
@@ -101,7 +101,7 @@
     display: block;
     width: 13px;
     height: 20px;
-    background-image: url(../images/arrowDown.svg);
+    background-image: url(./images/arrowDown.svg);
     background-repeat: no-repeat;
     margin: 0 auto;
     background-size: contain;

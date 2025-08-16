@@ -42,7 +42,7 @@
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
     border-radius: 16px;
-    background-image: url(../images/double-quotes.svg);
+    background-image: url(./images/double-quotes.svg);
     background-repeat: no-repeat;
     background-position: top left 30px;
     /* background-size: contain; */

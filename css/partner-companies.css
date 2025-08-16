@@ -231,7 +231,7 @@ body {
     position: absolute;
     top: 0;
     right: -70px;
-    background-image: url(../images/download-ico.svg);
+    background-image: url(./images/download-ico.svg);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -727,8 +727,8 @@ body {
 
 @media(min-width: 1200px) {
     .element-item {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
     }
 
     .grid-section h2 {

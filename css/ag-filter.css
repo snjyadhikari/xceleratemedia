@@ -24,7 +24,7 @@
     content: '';
     width: 34px;
     height: 34px;
-    background-image: url(../images/filter-plus.png);
+    background-image: url(./images/filter-plus.png);
     background-repeat: no-repeat;
     background-position: center;
         background-size: 18px;
@@ -57,7 +57,7 @@
 }
 
 .ag-filter-parent.open::after {
-    background-image: url(../images/filter-cross.png);
+    background-image: url(./images/filter-cross.png);
     -webkit-transform: translateY(-50%) rotate(45deg);
     -moz-transform: translateY(-50%) rotate(45deg);
     transform: translateY(-50%) rotate(45deg);
